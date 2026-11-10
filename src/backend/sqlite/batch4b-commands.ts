@@ -2,6 +2,18 @@ import { nativePayloads, type NativeOperation } from "@/domain/native-commands";
 import { toCentimes } from "./checkout";
 import type { SqlStatement } from "./port";
 import { membershipSql } from "@/domain/permissions";
+/**
+ * Remaining refundable centimes for the sale of SAV case `?` (one param: case id).
+ * Server-side check written inline, independent of the 0019 views, so either layer alone
+ * blocks an over-refund. Net line = gross - ceil(discount * gross / sale gross) (discount split
+ * by price); refundable = min(paid, max(0, returned net - outstanding debt)) - already refunded.
+ * REFUND outcomes already written earlier in the same batch are included.
+ */
+export const savRemainingRefundableSql = `(WITH k AS (SELECT sale_id id FROM service_cases WHERE id=?),
+g AS (SELECT s.total_minor total,(SELECT sum(l.unit_minor*l.quantity) FROM sale_lines l WHERE l.sale_id=s.id) gross FROM sales s JOIN k ON k.id=s.id),
+r AS (SELECT COALESCE(sum(l.unit_minor*l.quantity-((max(0,g.gross-g.total)*l.unit_minor*l.quantity+g.gross-1)/g.gross)),0) net FROM sav_outcomes o JOIN service_cases c ON c.id=o.case_id JOIN k ON k.id=c.sale_id JOIN sale_lines l ON l.sale_id=c.sale_id AND l.item_id=c.phone_id AND l.kind='phone' CROSS JOIN g WHERE o.outcome='REFUND'),
+m AS (SELECT COALESCE((SELECT cash_minor+bank_minor FROM sale_settlements WHERE sale_id=k.id),(SELECT amount_minor FROM payments WHERE sale_id=k.id),0) paid,COALESCE((SELECT amount_minor FROM sale_credits WHERE sale_id=k.id),0) credit,COALESCE((SELECT sum(x.amount_minor) FROM credit_repayments x WHERE x.sale_id=k.id AND NOT EXISTS(SELECT 1 FROM credit_repayment_reversals y WHERE y.repayment_id=x.id)),0) repaid,COALESCE((SELECT sum(amount_minor) FROM sav_refunds WHERE sale_id=k.id),0) refunded FROM k)
+SELECT min(m.paid+m.repaid,max(0,r.net-max(0,m.credit-m.repaid)))-m.refunded FROM m CROSS JOIN r)`;
 export function planBatch4b(
   operation: NativeOperation,
   payload: unknown,
@@ -140,6 +152,8 @@ export function planBatch4b(
           [v.caseId],
         );
         if (v.amount) {
+          // P0: never refund more than the returned line's net amount not absorbed by debt.
+          guard(`? <= ${savRemainingRefundableSql}`, [toCentimes(v.amount), v.caseId]);
           write(
             `INSERT INTO sav_refunds SELECT ?,?,?,sale_id,?,?,?,?,?,? FROM service_cases WHERE id=? AND ${pending}`,
             [

@@ -48,7 +48,8 @@ export const savExchange = z
     store,
     caseId: id,
     note: text,
-    refundAmount: amount,
+    // "0" is allowed only when the remaining debt absorbs the returned line (checked in SQL).
+    refundAmount: databaseMoney,
     method: z.enum(["Cash", "Bank"]),
     shiftId: id.optional(),
     bankMethod: z.enum(["VIREMENT", "CCP_BARIDIMOB"]).optional(),

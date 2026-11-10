@@ -1,5 +1,5 @@
 import { planRetailCheckout } from "./retail-checkout";
-import { planBatch4b } from "./batch4b-commands";
+import { planBatch4b, savRemainingRefundableSql } from "./batch4b-commands";
 import { membershipSql, transferApprovalSql } from "@/domain/permissions";
 import { nativeEnvelope, nativePayloads, type NativeOperation } from "@/domain/native-commands";
 import { canonicalJson, toCentimes } from "./checkout";
@@ -102,25 +102,30 @@ export function planNativeCommand(
         [v.caseId, v.checkout.payload.customerId ?? null, store],
       );
       guard(`NOT EXISTS(SELECT 1 FROM commands WHERE key=?)`, [v.checkout.idempotencyKey]);
+      const zeroRefund = toCentimes(v.refundAmount) === 0;
       out.push(
         ...planBatch4b(
           "sav.outcome",
-          {
-            store,
-            caseId: v.caseId,
-            outcome: "REFUND",
-            note: v.note,
-            amount: v.refundAmount,
-            method: v.method,
-            ...(v.shiftId ? { shiftId: v.shiftId } : {}),
-            ...(v.bankMethod ? { bankMethod: v.bankMethod } : {}),
-          },
+          zeroRefund
+            ? { store, caseId: v.caseId, outcome: "REFUND", note: v.note }
+            : {
+                store,
+                caseId: v.caseId,
+                outcome: "REFUND",
+                note: v.note,
+                amount: v.refundAmount,
+                method: v.method,
+                ...(v.shiftId ? { shiftId: v.shiftId } : {}),
+                ...(v.bankMethod ? { bankMethod: v.bankMethod } : {}),
+              },
           e.key,
           tx,
           actor,
           now,
         ),
       );
+      // P1: a zero-refund exchange is allowed only when the remaining debt absorbs the return.
+      if (zeroRefund) guard(`${savRemainingRefundableSql} <= 0`, [v.caseId]);
       out.push(...planRetailCheckout(v.checkout, principal, hash, crypto.randomUUID(), now));
       write(`INSERT INTO sav_exchanges SELECT ?,?,?,? WHERE ${pending}`, [
         v.caseId,
