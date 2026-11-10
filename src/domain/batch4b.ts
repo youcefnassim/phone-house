@@ -36,15 +36,12 @@ export const savOutcome = z
   })
   .strict()
   .superRefine((v, c) => {
+    // Full decline: reason, no payment. Partial refund: amount + reason for the unrefunded remainder.
     if (
       (v.refundDeclined || v.declineReason) &&
       (v.outcome !== "REFUND" ||
-        !v.refundDeclined ||
         !v.declineReason ||
-        v.amount ||
-        v.method ||
-        v.shiftId ||
-        v.bankMethod)
+        (v.refundDeclined ? !!(v.amount || v.method || v.shiftId || v.bankMethod) : !v.amount))
     )
       c.addIssue({ code: "custom", message: "DECLINE_MISMATCH" });
     if (
@@ -67,6 +64,8 @@ export const savExchange = z
     method: z.enum(["Cash", "Bank"]),
     shiftId: id.optional(),
     bankMethod: z.enum(["VIREMENT", "CCP_BARIDIMOB"]).optional(),
+    // Reason for the unrefunded remainder when refundAmount is below what is due.
+    declineReason: text.optional(),
     checkout: nativeCheckoutEnvelope,
   })
   .strict()

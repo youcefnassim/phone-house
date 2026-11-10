@@ -117,6 +117,7 @@ export function planNativeCommand(
                 method: v.method,
                 ...(v.shiftId ? { shiftId: v.shiftId } : {}),
                 ...(v.bankMethod ? { bankMethod: v.bankMethod } : {}),
+                ...(v.declineReason ? { declineReason: v.declineReason } : {}),
               },
           e.key,
           tx,

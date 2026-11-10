@@ -132,6 +132,10 @@ export function SavActions({
                   <option value="CCP_BARIDIMOB">CCP / BaridiMob</option>
                 </select>
               )}
+              <label>
+                {t.remainderReason}
+                <Input value={reason} onChange={(e) => setReason(e.target.value)} />
+              </label>
             </>
           )}
           <Button
@@ -149,6 +153,7 @@ export function SavActions({
                       amount,
                       method,
                       ...(method === "Cash" ? { shiftId: shift } : { bankMethod: bank }),
+                      ...(reason.trim() ? { declineReason: reason.trim() } : {}),
                     }
                   : {}),
               })

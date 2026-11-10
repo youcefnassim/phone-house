@@ -216,3 +216,136 @@ describe("UI: refund declined needs a reason", () => {
     });
   });
 });
+
+describe("partial refund: the unrefunded remainder needs a reason and is recorded", () => {
+  const cash = (amount: string, extra: Record<string, unknown> = {}, actor = "manager") =>
+    ret({ amount, method: "Cash", shiftId: shift, ...extra }, actor);
+
+  it("refund below what is due without a reason is REJECTED, nothing recorded", async () => {
+    await cashSale();
+    await expect(cash("200")).rejects.toThrow("REJECTED");
+    nothingRecorded();
+  });
+
+  it("seller cannot record a partial refund", async () => {
+    await cashSale();
+    await expect(cash("200", { declineReason: "Scratched screen" }, "seller")).rejects.toThrow(
+      "FORBIDDEN",
+    );
+    nothingRecorded();
+  });
+
+  it("manager partial refund with reason: refund 200 paid, exact 100 waived in the decline ledger", async () => {
+    await cashSale();
+    await cash("200", { declineReason: "Scratched screen" });
+    expect(one("SELECT amount_minor FROM sav_refunds")).toBe(20000);
+    expect(h.db.prepare("SELECT * FROM sav_refund_declines").get()).toMatchObject({
+      case_id: "case",
+      declined_minor: 10000,
+      reason: "Scratched screen",
+      actor_id: "manager",
+    });
+    expect(one("SELECT sum(amount_minor) FROM cash_adjustments")).toBe(-20000);
+  });
+
+  it("full refund with a reason is REJECTED (nothing to waive); full refund alone is fine", async () => {
+    await cashSale();
+    await expect(cash("300", { declineReason: "Nothing waived" })).rejects.toThrow("REJECTED");
+    nothingRecorded();
+    await cash("300");
+    expect(count("sav_refund_declines")).toBe(0);
+  });
+
+  it("owner may record a partial refund", async () => {
+    await cashSale();
+    await cash("299.99", { declineReason: "Missing charger" }, "owner");
+    expect(one("SELECT declined_minor FROM sav_refund_declines")).toBe(1);
+  });
+
+  it("exchange with a partial refund needs the reason too", async () => {
+    await cashSale();
+    const replacement = "22222222-2222-4222-8222-222222222222";
+    h.db.exec(
+      `INSERT INTO phones(id,store_id,catalog_id,barcode,state,attributes_json,serial) VALUES('${replacement}','M01','model','REPLACEMENT','AVAILABLE','{}','SN2')`,
+    );
+    const customerId = String(one("SELECT customer_id FROM sales"));
+    const exchange = (extra: Record<string, unknown>) =>
+      send("sav.exchange", {
+        caseId: "case",
+        note: "Exchange",
+        refundAmount: "250",
+        method: "Cash",
+        shiftId: shift,
+        ...extra,
+        checkout: {
+          contractVersion: "native-pos-2026-11-07",
+          idempotencyKey: `sav-decline-exchange-${++n}`,
+          clientRequestId: crypto.randomUUID(),
+          payload: {
+            store: "M01",
+            shiftId: shift,
+            customerId,
+            buyer: { surname: "Buyer", givenName: "Name", contact: "0555555555" },
+            lines: [{ kind: "phone", itemId: replacement, quantity: "1" }],
+            tender: "Cash",
+            tenderedAmount: "300",
+            warranties: [{ itemId: replacement, requested: false }],
+          },
+        },
+      });
+    await expect(exchange({})).rejects.toThrow("REJECTED");
+    nothingRecorded();
+    await exchange({ declineReason: "Box missing" });
+    expect(one("SELECT amount_minor FROM sav_refunds")).toBe(25000);
+    expect(one("SELECT declined_minor FROM sav_refund_declines")).toBe(5000);
+    expect(count("sav_exchanges")).toBe(1);
+  });
+
+  it("SQL: a decline after a raw refund must equal the exact remainder", async () => {
+    await cashSale();
+    const saleId = one("SELECT id FROM sales");
+    h.db.exec("PRAGMA foreign_keys=OFF");
+    h.db.exec(`INSERT INTO sav_outcomes VALUES('case','raw-outcome','REFUND','raw','manager',0)`);
+    h.db.exec(
+      `INSERT INTO sav_refunds VALUES('raw','raw-refund','case','${saleId}',20000,'Bank','VIREMENT',NULL,'manager',0)`,
+    );
+    const decline = (minor: number) =>
+      h.db.exec(
+        `INSERT INTO sav_refund_declines VALUES('case','raw-decline',${minor},'Reason','manager',0)`,
+      );
+    expect(() => decline(30000)).toThrow("REJECTED");
+    decline(10000);
+    expect(count("sav_refund_declines")).toBe(1);
+  });
+});
+
+describe("UI: partial refund reason", () => {
+  it("sends the amount with the remainder reason", async () => {
+    resetTestWorkspace();
+    localStorage.setItem("ph-lang", "en");
+    const onCommand = vi.fn(async () => {});
+    render(
+      <ErpProvider>
+        <SavActions approve manufacturer={false} closed={false} onCommand={onCommand} />
+      </ErpProvider>,
+    );
+    fireEvent.change(screen.getByLabelText("Note"), { target: { value: "Return" } });
+    fireEvent.change(screen.getByLabelText("Approve outcome", { selector: "select" }), {
+      target: { value: "REFUND" },
+    });
+    fireEvent.change(screen.getByLabelText("Amount"), { target: { value: "200" } });
+    fireEvent.change(screen.getByLabelText("Shift"), { target: { value: shift } });
+    fireEvent.change(screen.getByLabelText("Reason for the unrefunded remainder"), {
+      target: { value: "Scratched screen" },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "Approve outcome" }));
+    expect(onCommand).toHaveBeenCalledWith("sav.outcome", {
+      outcome: "REFUND",
+      note: "Return",
+      amount: "200",
+      method: "Cash",
+      shiftId: shift,
+      declineReason: "Scratched screen",
+    });
+  });
+});

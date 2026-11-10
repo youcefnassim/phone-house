@@ -190,6 +190,17 @@ export function planBatch4b(
             key,
             toCentimes(v.amount ?? "0"),
           ]);
+          if (v.declineReason) {
+            // Partial refund: the exact unrefunded remainder is waived with a reason (append-only).
+            guard(`${savRemainingRefundableSql} > 0`, [v.caseId]);
+            write(
+              `INSERT INTO sav_refund_declines SELECT ?,?,${savRemainingRefundableSql},?,?,? WHERE ${pending}`,
+              [v.caseId, key, v.caseId, v.declineReason, actor, now],
+            );
+          } else {
+            // No reason: the refund must settle everything still due (never a silent remainder).
+            guard(`${savRemainingRefundableSql} <= 0`, [v.caseId]);
+          }
         } else if (v.refundDeclined) {
           // 3b: explicit, reasoned waiver of money actually due; records the waived amount.
           // Role is enforced by permissions (sav.outcome) and again by the 0020 trigger.
