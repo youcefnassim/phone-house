@@ -66,8 +66,36 @@ function identityConfig(env: NativeWorkerEnv, auth: AuthConfig | null): unknown 
     return null;
   }
 }
+/** Consume (and discard, capped at 1 MiB) any unread request body before the response is sent.
+ * Early returns (status, rejections, rate limit) otherwise leave the stream unread, and the runtime
+ * later fails with "Can't read from request stream after response has been sent" (seen under wrangler dev). */
+export async function drainRequestBody(request: Request) {
+  if (!request.body || request.bodyUsed) return;
+  const reader = request.body.getReader();
+  let total = 0;
+  try {
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) return;
+      total += value.byteLength;
+      if (total > 1_048_576) {
+        await reader.cancel();
+        return;
+      }
+    }
+  } catch {
+    /* client went away: nothing to drain */
+  }
+}
 export default {
   async fetch(request: Request, env: NativeWorkerEnv): Promise<Response> {
+    const response = await route(request, env);
+    await drainRequestBody(request);
+    return response;
+  },
+};
+async function route(request: Request, env: NativeWorkerEnv): Promise<Response> {
+  {
     const url = new URL(request.url);
     const auth = authConfigFromEnv(env);
     if (
@@ -131,5 +159,5 @@ export default {
     } catch {
       return unavailable("NOT_CONFIGURED");
     }
-  },
-};
+  }
+}

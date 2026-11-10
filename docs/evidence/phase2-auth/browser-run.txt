@@ -1,0 +1,58 @@
+FR active name: Hana S.
+FR shows not-connected text: false
+AR dir: rtl
+AR active name after PIN: Karim B.
+AR after reload (cookie refresh): Karim B., dark=true
+AR token in storage: false
+390px horizontal overflow: false
+PROBLEMS:
+[fr-DZ] console: Failed to load resource: the server responded with a status of 401 (Unauthorized)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] console: Failed to load resource: the server responded with a status of 400 (Bad Request)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] console: Failed to load resource: the server responded with a status of 401 (Unauthorized)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] console: Failed to load resource: the server responded with a status of 401 (Unauthorized)
+[ar-DZ] console: Failed to load resource: the server responded with a status of 401 (Unauthorized)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[ar-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[ar-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] console: Failed to load resource: the server responded with a status of 401 (Unauthorized)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.svg
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)
+[fr-DZ] 404 http://localhost:8787/assets/phonehouse-logo-original.png
+[fr-DZ] console: Failed to load resource: the server responded with a status of 404 (Not Found)

@@ -69,3 +69,24 @@ it("server entry finds the Worker env where Nitro puts it (request.runtime.cloud
   delete (globalThis as { __env__?: unknown }).__env__;
   expect(workerEnv(new Request("https://x/"), undefined)).toEqual({});
 });
+
+it("every API response leaves no unread request body (early returns included)", async () => {
+  const { drainRequestBody } = await import("@/backend/worker");
+  const make = (origin: string) =>
+    new Request("https://erp.phonehousemaghnia.com/api/native/status", {
+      method: "POST",
+      headers: { Origin: origin, "Content-Type": "application/json" },
+      body: JSON.stringify({ padding: "x".repeat(10_000) }),
+    });
+  for (const [req, e] of [
+    [make("https://erp.phonehousemaghnia.com"), env()],
+    [make("https://evil.example"), env()],
+    [make("https://erp.phonehousemaghnia.com"), env({ ENABLE_NATIVE: "NO" })],
+  ] as const) {
+    await worker.fetch(req, e);
+    expect(req.bodyUsed).toBe(true);
+  }
+  const big = new Request("https://x/", { method: "POST", body: "y".repeat(2_000_000) });
+  await drainRequestBody(big);
+  expect(big.bodyUsed).toBe(true);
+});

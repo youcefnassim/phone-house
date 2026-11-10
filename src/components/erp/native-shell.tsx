@@ -1,5 +1,5 @@
 import { routeAllowed } from "@/domain/permissions";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Link, useLocation, useRouterState } from "@tanstack/react-router";
 import { Menu, Moon, Sun, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -41,7 +41,8 @@ const names: Record<NativeRoute, string> = {
   "/settings": "nav.settings",
 };
 /** Native application shell has no workspace subscription, fake actor, local search or KPI. */
-export function NativeShell() {
+/** topBar: signed-in person bar (seller name, switch, sign out), rendered in the content column. */
+export function NativeShell({ topBar }: { topBar?: ReactNode } = {}) {
   const ui = useErp();
   const { t } = ui;
   const notConnected = ownerDashboardText(ui.lang).disconnected;
@@ -162,6 +163,7 @@ export function NativeShell() {
         </aside>
         {open && <div className="mobile-shade" onClick={() => setOpen(false)} aria-hidden="true" />}
         <div className="erp-main min-w-0">
+          {topBar}
           <header className="topbar native-topbar">
             <Button
               className="mobile-menu"
