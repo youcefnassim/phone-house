@@ -37,11 +37,19 @@ export function newPublicReference() {
   const data = chars.join("");
   return `PH-${data.slice(0, 4)}-${data.slice(4)}-${checkCharacter(data)}`;
 }
+/** Full Crockford Base32 check alphabet (37 symbols). Parsers accept all of it. */
+export const crockfordCheckAlphabet = "0123456789ABCDEFGHJKMNPQRSTVWXYZ*~$=U";
+/**
+ * Public reference FORMAT: PH-XXXX-XXXX-C with data symbols from publicAlphabet and C from the full
+ * Crockford check alphabet. Format only; validPublicReference also verifies the checksum
+ * (the current mod-31 scheme emits publicAlphabet or "*", never ~ $ = U).
+ */
+export const publicReferenceFormat =
+  /^PH-([23456789ABCDEFGHJKMNPQRSTVWXYZ]{4})-([23456789ABCDEFGHJKMNPQRSTVWXYZ]{4})-([0-9A-HJKMNP-TV-Z*~$=U])$/;
+/** Scanned/typed input: trim and upper-case (Crockford is case-insensitive). */
+export const normalizePublicReference = (value: string) => value.trim().toUpperCase();
 export function validPublicReference(value: string) {
-  const m =
-    /^PH-([23456789ABCDEFGHJKMNPQRSTVWXYZ]{4})-([23456789ABCDEFGHJKMNPQRSTVWXYZ]{4})-([23456789ABCDEFGHJKMNPQRSTVWXYZ*])$/.exec(
-      value,
-    );
+  const m = publicReferenceFormat.exec(value);
   return !!m && checkCharacter(`${m[1]}${m[2]}`) === m[3];
 }
 export const invoiceYear = (date: Date | string) => Number(algiersDate(date).slice(0, 4));

@@ -1,0 +1,10 @@
+-- 3b (owner-approved 2026-11-10): a SAV return with money due states a refund amount or an explicit,
+-- reasoned "refund declined" approved by MANAGER (same store) or SUPER_ADMIN. Never a silent zero.
+-- Additive: new append-only ledger; no existing row or migration changed.
+CREATE TABLE sav_refund_declines(case_id TEXT PRIMARY KEY REFERENCES sav_outcomes(case_id),command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),declined_minor INTEGER NOT NULL CHECK(declined_minor BETWEEN 1 AND 99999999999999),reason TEXT NOT NULL CHECK(length(trim(reason)) BETWEEN 1 AND 2000),actor_id TEXT NOT NULL REFERENCES accounts(id),at INTEGER NOT NULL) STRICT;
+CREATE TRIGGER sav_refund_decline_approver BEFORE INSERT ON sav_refund_declines WHEN NOT EXISTS(SELECT 1 FROM memberships m JOIN service_cases c ON c.id=NEW.case_id JOIN sales s ON s.id=c.sale_id WHERE m.user_id=NEW.actor_id AND ((m.role='SUPER_ADMIN' AND m.store_id='GLOBAL') OR (m.role='MANAGER' AND m.store_id=s.store_id))) BEGIN SELECT RAISE(ABORT,'APPROVER_ROLE'); END;
+-- The waived amount is exactly what is still refundable for the sale (never zero), on a REFUND outcome without a refund row.
+CREATE TRIGGER sav_refund_decline_amount BEFORE INSERT ON sav_refund_declines WHEN NOT EXISTS(SELECT 1 FROM sav_outcomes WHERE case_id=NEW.case_id AND outcome='REFUND') OR EXISTS(SELECT 1 FROM sav_refunds WHERE case_id=NEW.case_id) OR NEW.declined_minor<>COALESCE((SELECT k.refundable_minor-k.refunded_minor FROM sale_refund_capacity k JOIN service_cases c ON c.sale_id=k.sale_id WHERE c.id=NEW.case_id),0) BEGIN SELECT RAISE(ABORT,'REJECTED'); END;
+CREATE TRIGGER sav_refund_after_decline BEFORE INSERT ON sav_refunds WHEN EXISTS(SELECT 1 FROM sav_refund_declines WHERE case_id=NEW.case_id) BEGIN SELECT RAISE(ABORT,'REJECTED'); END;
+CREATE TRIGGER immutable_sav_refund_declines_update BEFORE UPDATE ON sav_refund_declines BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_sav_refund_declines_delete BEFORE DELETE ON sav_refund_declines BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;

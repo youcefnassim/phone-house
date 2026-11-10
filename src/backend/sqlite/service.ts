@@ -1,3 +1,4 @@
+import { normalizePublicReference, publicReferenceFormat } from "@/domain/warranty-documents";
 import { daysSinceSale, salesByDay, zakatTotals } from "@/domain/batch4b";
 import { algiersDate } from "@/domain/sales-review";
 import { ownerDashboardResult } from "@/domain/owner-dashboard";
@@ -690,7 +691,11 @@ export function createNativeService(
     },
     async receipt(credential: string, id: unknown, scope: unknown) {
       const store = scopeSchema.parse(scope);
-      const saleId = z.string().min(1).max(80).parse(id);
+      const raw = z.string().min(1).max(80).parse(id);
+      // A scanned/typed public reference (any case, check character may be "*") is normalized.
+      const saleId = publicReferenceFormat.test(normalizePublicReference(raw))
+        ? normalizePublicReference(raw)
+        : raw;
       const identity = await authenticate(credential);
       await authorize(identity, store);
       const rows = await db.read({

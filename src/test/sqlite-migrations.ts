@@ -19,4 +19,5 @@ export const sqliteMigrations = [
   "0017_sav_credit_return.sql",
   "0018_sav_credit_line_return.sql",
   "0019_sav_net_line_refund.sql",
+  "0020_sav_refund_decline.sql",
 ];

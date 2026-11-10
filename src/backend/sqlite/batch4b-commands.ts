@@ -190,6 +190,17 @@ export function planBatch4b(
             key,
             toCentimes(v.amount ?? "0"),
           ]);
+        } else if (v.refundDeclined) {
+          // 3b: explicit, reasoned waiver of money actually due; records the waived amount.
+          // Role is enforced by permissions (sav.outcome) and again by the 0020 trigger.
+          guard(`${savRemainingRefundableSql} > 0`, [v.caseId]);
+          write(
+            `INSERT INTO sav_refund_declines SELECT ?,?,${savRemainingRefundableSql},?,?,? WHERE ${pending}`,
+            [v.caseId, key, v.caseId, v.declineReason ?? "", actor, now],
+          );
+        } else {
+          // 3b: no amount and no decline is only allowed when nothing is due (debt absorbs it).
+          guard(`${savRemainingRefundableSql} <= 0`, [v.caseId]);
         }
       }
     }

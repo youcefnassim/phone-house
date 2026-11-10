@@ -24,6 +24,8 @@ export function SavActions({
     [bank, setBank] = useState("VIREMENT"),
     [shift, setShift] = useState(""),
     [amount, setAmount] = useState(""),
+    [declined, setDeclined] = useState(false),
+    [reason, setReason] = useState(""),
     [busy, setBusy] = useState(false),
     [error, setError] = useState("");
   const run = (op: "sav.track" | "sav.outcome", payload: Record<string, unknown>) => {
@@ -82,6 +84,22 @@ export function SavActions({
             </select>
           </label>
           {outcome === "REFUND" && (
+            <label className="flex gap-2">
+              <input
+                type="checkbox"
+                checked={declined}
+                onChange={(e) => setDeclined(e.target.checked)}
+              />
+              {t.refundDeclined}
+            </label>
+          )}
+          {outcome === "REFUND" && declined && (
+            <label>
+              {t.declineReason}
+              <Input value={reason} onChange={(e) => setReason(e.target.value)} />
+            </label>
+          )}
+          {outcome === "REFUND" && !declined && (
             <>
               <label>
                 {t.amount}
@@ -118,12 +136,15 @@ export function SavActions({
           )}
           <Button
             size="lg"
-            disabled={busy || !note}
+            disabled={busy || !note || (outcome === "REFUND" && declined && !reason.trim())}
             onClick={() =>
               run("sav.outcome", {
                 outcome,
                 note,
-                ...(outcome === "REFUND" && amount
+                ...(outcome === "REFUND" && declined
+                  ? { refundDeclined: true, declineReason: reason.trim() }
+                  : {}),
+                ...(outcome === "REFUND" && !declined && amount
                   ? {
                       amount,
                       method,

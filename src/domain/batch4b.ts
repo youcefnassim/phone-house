@@ -30,9 +30,23 @@ export const savOutcome = z
     method: z.enum(["Cash", "Bank"]).optional(),
     shiftId: id.optional(),
     bankMethod: z.enum(["VIREMENT", "CCP_BARIDIMOB"]).optional(),
+    // Money due but not paid back: must be stated explicitly with a reason (never a silent zero).
+    refundDeclined: z.literal(true).optional(),
+    declineReason: text.optional(),
   })
   .strict()
   .superRefine((v, c) => {
+    if (
+      (v.refundDeclined || v.declineReason) &&
+      (v.outcome !== "REFUND" ||
+        !v.refundDeclined ||
+        !v.declineReason ||
+        v.amount ||
+        v.method ||
+        v.shiftId ||
+        v.bankMethod)
+    )
+      c.addIssue({ code: "custom", message: "DECLINE_MISMATCH" });
     if (
       v.outcome === "REFUND" &&
       // A return with no money back (debt absorbs the line) carries no payment fields at all.

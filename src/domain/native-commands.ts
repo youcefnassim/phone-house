@@ -1,6 +1,7 @@
 import { savTrack, savOutcome, savRestock, usedPurchase, savExchange } from "./batch4b";
 import { rolesForOperation } from "./permissions";
 import { z } from "zod";
+import { normalizePublicReference, publicReferenceFormat } from "./warranty-documents";
 import { settingsSaveValue } from "./intake";
 import { databaseMoney, approvedFacilitySchedule } from "./transaction-contracts";
 const id = z
@@ -239,7 +240,14 @@ export const nativePayloads = {
     .object({
       ...base,
       id,
-      saleId: id,
+      // Internal sale id, or a scanned/typed public reference (check character may be "*").
+      saleId: z.union([
+        z
+          .string()
+          .transform(normalizePublicReference)
+          .pipe(z.string().regex(publicReferenceFormat)),
+        id,
+      ]),
       phoneId: id,
       customerId: id,
       imei: z.string().regex(/^\d{15}$/),

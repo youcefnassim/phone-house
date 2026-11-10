@@ -6,9 +6,12 @@ import { createNativeService } from "@/backend/sqlite/service";
 import { defaultSettings, resolveSettings, staffReadableSettings } from "@/domain/intake";
 import {
   legalChecklist,
+  crockfordCheckAlphabet,
   newPublicReference,
+  normalizePublicReference,
   officialPrintGate,
   publicAlphabet,
+  publicReferenceFormat,
   validPublicReference,
   warrantyRule,
 } from "@/domain/warranty-documents";
@@ -32,6 +35,32 @@ const ids = Array.from(
 );
 const identity = { userId: "seller", sessionId: "seller", expiresAt: now + 100000 };
 const hash = "a".repeat(64);
+// Deterministic public references: every check character the generator can emit
+// (30 data symbols + "*") is covered by a seeded case, so no test depends on chance.
+const checkCharacters = [...publicAlphabet, "*"];
+function dataFor(check: string) {
+  for (const a of publicAlphabet)
+    for (const b of publicAlphabet) {
+      const data = `234567${a}${b}`;
+      if (validPublicReference(`PH-${data.slice(0, 4)}-${data.slice(4)}-${check}`)) return data;
+    }
+  throw new Error(`NO_DATA_FOR_${check}`);
+}
+const seededReference = (check: string) => {
+  const data = dataFor(check);
+  return `PH-${data.slice(0, 4)}-${data.slice(4)}-${check}`;
+};
+/** Makes the next newPublicReference() return seededReference(check). */
+function seedNextReference(check: string) {
+  const data = dataFor(check);
+  const spy = vi.spyOn(crypto, "getRandomValues").mockImplementationOnce((array) => {
+    const bytes = array as Uint8Array;
+    bytes.fill(255);
+    [...data].forEach((c, i) => (bytes[i] = publicAlphabet.indexOf(c)));
+    return array;
+  });
+  return { ref: seededReference(check), spy };
+}
 const service = () =>
   createNativeService(
     h.port,
@@ -64,7 +93,7 @@ const receipt: NativeReceipt = {
   specimen: 1,
   saleId: "sale",
   invoiceNumber: "FA-M01-2026-000001",
-  publicRef: newPublicReference(),
+  publicRef: seededReference("*"),
   store: "M01",
   operator: "seller",
   shift: "shift",
@@ -251,40 +280,91 @@ it("additive migration retains old null numbers and per-store/year sequences", (
     last: 1,
   });
 });
-it("public reference check character catches every single data-symbol typo", () => {
-  const ref = newPublicReference();
-  expect(validPublicReference(ref)).toBe(true);
-  expect(ref).not.toMatch(/[O0I1]/);
-  for (const index of [3, 4, 5, 6, 8, 9, 10, 11])
-    for (const symbol of publicAlphabet) {
-      if (symbol === ref[index]) continue;
-      expect(validPublicReference(ref.slice(0, index) + symbol + ref.slice(index + 1))).toBe(false);
-    }
-  expect(validPublicReference(ref.slice(0, -1) + (ref.endsWith("2") ? "3" : "2"))).toBe(false);
+it.each(checkCharacters)(
+  "public reference ending %s catches every single data-symbol typo",
+  (check) => {
+    const ref = seededReference(check);
+    expect(validPublicReference(ref)).toBe(true);
+    expect(ref).not.toMatch(/[O0I1]/);
+    for (const index of [3, 4, 5, 6, 8, 9, 10, 11])
+      for (const symbol of publicAlphabet) {
+        if (symbol === ref[index]) continue;
+        expect(validPublicReference(ref.slice(0, index) + symbol + ref.slice(index + 1))).toBe(
+          false,
+        );
+      }
+    expect(validPublicReference(ref.slice(0, -1) + (ref.endsWith("2") ? "3" : "2"))).toBe(false);
+  },
+);
+it.each(checkCharacters)(
+  "checkout snapshots manufacturer provider/months and receipt/SAV lookup accepts public reference ending %s",
+  async (check) => {
+    h.db
+      .prepare("INSERT INTO phone_identifiers VALUES(?,?,1)")
+      .run("490154203237518", ids[0] ?? "");
+    const seeded = seedNextReference(check);
+    await service().checkout("seller", request(0));
+    seeded.spy.mockRestore();
+    const sale = h.db.prepare("SELECT id,public_ref,customer_id FROM sales").get();
+    expect(sale?.["public_ref"]).toBe(seeded.ref);
+    const snap = (await service().receipt("seller", sale?.["public_ref"], "M01")) as NativeReceipt;
+    expect(snap.warranties[0]).toMatchObject({ provider: "MANUFACTURER", months: 12 });
+    await service().execute("seller", {
+      version: "native-2026-11-06",
+      key: "sav-public-reference-command",
+      operation: "sav.open",
+      payload: {
+        store: "M01",
+        id: "case",
+        saleId: sale?.["public_ref"],
+        phoneId: ids[0],
+        customerId: sale?.["customer_id"],
+        imei: "490154203237518",
+        issue: "Inspection",
+      },
+    });
+    expect(
+      (await service().savCases("seller", { store: "M01", search: sale?.["public_ref"] })).cases[0],
+    ).toMatchObject({ publicRef: sale?.["public_ref"], warrantyProvider: "MANUFACTURER" });
+  },
+);
+it("public reference format accepts the full Crockford check alphabet; the checksum still decides", () => {
+  expect(crockfordCheckAlphabet).toBe("0123456789ABCDEFGHJKMNPQRSTVWXYZ*~$=U");
+  for (const c of crockfordCheckAlphabet)
+    expect(publicReferenceFormat.test(`PH-2345-6789-${c}`)).toBe(true);
+  expect(publicReferenceFormat.test("PH-2345-6789-#")).toBe(false);
+  expect(publicReferenceFormat.test("PH-2345-678O-*")).toBe(false);
+  // The current mod-31 scheme never emits ~ $ = U, so they parse but never validate.
+  for (const c of "~$=U") expect(validPublicReference(`PH-2345-6789-${c}`)).toBe(false);
+  expect(normalizePublicReference("  ph-2345-6789-*  ")).toBe("PH-2345-6789-*");
 });
-it("checkout snapshots manufacturer provider/months and receipt/SAV lookup accepts public reference", async () => {
+it("SAV can be opened from a scanned/typed public reference ending * in any case", async () => {
   h.db.prepare("INSERT INTO phone_identifiers VALUES(?,?,1)").run("490154203237518", ids[0] ?? "");
+  const seeded = seedNextReference("*");
   await service().checkout("seller", request(0));
-  const sale = h.db.prepare("SELECT id,public_ref,customer_id FROM sales").get();
-  const snap = (await service().receipt("seller", sale?.["public_ref"], "M01")) as NativeReceipt;
-  expect(snap.warranties[0]).toMatchObject({ provider: "MANUFACTURER", months: 12 });
+  seeded.spy.mockRestore();
+  const sale = h.db.prepare("SELECT id,customer_id FROM sales").get();
   await service().execute("seller", {
     version: "native-2026-11-06",
-    key: "sav-public-reference-command",
+    key: "sav-public-reference-lower",
     operation: "sav.open",
     payload: {
       store: "M01",
       id: "case",
-      saleId: sale?.["public_ref"],
+      saleId: ` ${seeded.ref.toLowerCase()} `,
       phoneId: ids[0],
       customerId: sale?.["customer_id"],
       imei: "490154203237518",
       issue: "Inspection",
     },
   });
-  expect(
-    (await service().savCases("seller", { store: "M01", search: sale?.["public_ref"] })).cases[0],
-  ).toMatchObject({ publicRef: sale?.["public_ref"], warrantyProvider: "MANUFACTURER" });
+  expect(h.db.prepare("SELECT sale_id FROM service_cases").get()?.["sale_id"]).toBe(sale?.["id"]);
+  const snap = (await service().receipt(
+    "seller",
+    ` ${seeded.ref.toLowerCase()} `,
+    "M01",
+  )) as NativeReceipt;
+  expect(snap.publicRef).toBe(seeded.ref);
 });
 it("six legal fields gate invoice; SHOP alone adds bilingual conditions, never another store's address", () => {
   expect(legalChecklist(defaultSettings, "M01")).toHaveLength(7);
