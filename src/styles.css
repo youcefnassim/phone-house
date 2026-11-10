@@ -3494,8 +3494,9 @@ h1 {
 }
 .brand {
   min-height: 110px;
-  padding: 28px 22px;
+  padding: 24px 20px;
   gap: 12px;
+  justify-content: center;
 }
 .nav-active,
 .dark .nav-active {
@@ -3850,11 +3851,84 @@ main {
 }
 
 .official-brand-logo {
-  width: 180px;
-  min-width: 140px;
+  width: 140px;
+  min-width: 100px;
   max-width: 100%;
+  aspect-ratio: 1 / 1;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+.official-brand-logo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 194, 26, 0.25);
+}
+.dark .official-brand-logo {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 16px rgba(255, 194, 26, 0.2);
+}
+.sidebar .official-brand-logo {
+  width: 130px;
+}
+.auth-brand .official-brand-logo {
+  width: 76px;
+  min-width: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+}
+
+/* Background watermark: subtle branded presence across the software */
+.erp-layout::before,
+.auth-page::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(540px, 52vw);
+  height: min(540px, 52vw);
+  background-image: url("/assets/phonehouse-logo-original.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  border-radius: 50%;
+  transition: opacity 0.25s ease;
+}
+
+@media (min-width: 769px) {
+  .erp-layout::before {
+    left: calc(50% + 130px);
+  }
+  [dir="rtl"] .erp-layout::before {
+    left: calc(50% - 130px);
+  }
+}
+
+.dark .erp-layout::before,
+.dark .auth-page::before {
+  opacity: 0.07;
+  filter: drop-shadow(0 0 40px rgba(255, 194, 26, 0.15));
+}
+
+@media (max-width: 768px) {
+  .erp-layout::before,
+  .auth-page::before {
+    width: 76vw;
+    height: 76vw;
+  }
+}
+
+@media print {
+  .erp-layout::before,
+  .auth-page::before {
+    display: none !important;
+  }
 }
 
 /* Owner-approved phone invoice/warranty: one page per phone; immutable print portal. */

@@ -130,8 +130,40 @@ export function NativeUsedPurchase({ store, owner }: { store: "M01" | "M02"; own
               />
             </label>
           ))}
-          {native ? (
-            <label>
+          <div className="sm:col-span-2 space-y-2 border border-border p-3 rounded-md bg-muted/20">
+            <label className="block text-sm font-medium">
+              {t.photo}
+              <Input
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+                capture="environment"
+                className="mt-1"
+                onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (!f || f.size > 10000000) return;
+                  const r = new FileReader();
+                  r.onload = () => {
+                    setPhoto(String(r.result));
+                    setPending(true);
+                  };
+                  r.readAsDataURL(f);
+                }}
+              />
+            </label>
+            {photo && (
+              <div className="relative inline-block mt-2">
+                <img className="max-h-36 rounded border border-border shadow-sm" src={photo} alt={t.photo} />
+                <Button
+                  size="sm"
+                  variant="destructive"
+                  className="mt-1 block"
+                  onClick={() => setPhoto("")}
+                >
+                  {t.cancel}
+                </Button>
+              </div>
+            )}
+            <label className="flex items-center gap-2 text-sm text-muted-foreground mt-2 cursor-pointer">
               <input
                 type="checkbox"
                 checked={pending}
@@ -139,24 +171,7 @@ export function NativeUsedPurchase({ store, owner }: { store: "M01" | "M02"; own
               />
               {t.pending}
             </label>
-          ) : (
-            <label>
-              {t.photo}
-              <Input
-                type="file"
-                accept="image/png,image/jpeg,image/webp"
-                capture="environment"
-                onChange={(e) => {
-                  const f = e.target.files?.[0];
-                  if (!f || f.size > 10000000) return;
-                  const r = new FileReader();
-                  r.onload = () => setPhoto(String(r.result));
-                  r.readAsDataURL(f);
-                }}
-              />
-              {photo && <img className="max-h-32" src={photo} alt={t.photo} />}
-            </label>
-          )}
+          </div>
           <Button
             size="lg"
             disabled={
@@ -169,7 +184,7 @@ export function NativeUsedPurchase({ store, owner }: { store: "M01" | "M02"; own
               !imei ||
               !serial ||
               !amount ||
-              (native ? !pending : !photo)
+              (!pending && !photo)
             }
             onClick={() => void save()}
           >
