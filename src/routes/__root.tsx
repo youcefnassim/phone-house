@@ -144,6 +144,9 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import { Toaster } from "@/components/ui/sonner";
+import { CommandPalette } from "@/components/erp/command-palette";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const { pathname } = useLocation();
@@ -156,6 +159,8 @@ function RootComponent() {
           <Outlet />
         </ApplicationFrame>
       </Suspense>
+      <CommandPalette />
+      <Toaster position="bottom-right" richColors closeButton />
     </QueryClientProvider>
   );
 }

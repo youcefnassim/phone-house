@@ -196,6 +196,17 @@ export function NativeShell({ topBar }: { topBar?: ReactNode } = {}) {
                 onChange={(e) => setSearch(e.target.value)}
                 disabled={!allowed}
               />
+              <button
+                type="button"
+                className="quick-palette-trigger"
+                onClick={() => {
+                  const event = new KeyboardEvent("keydown", { key: "k", ctrlKey: true });
+                  document.dispatchEvent(event);
+                }}
+                title="Palette de commandes (Ctrl+K)"
+              >
+                <kbd>Ctrl K</kbd>
+              </button>
               <Button
                 size="icon"
                 variant="ghost"

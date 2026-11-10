@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { parseScanPayload, stopScanTracks, type ScanTarget } from "@/domain/scan-payload";
 import { useErp } from "./context";
+import { toast } from "sonner";
+import { playAudioBeep } from "@/lib/audio-feedback";
 
 /** Browser-only decoder is imported after a human camera action, never during SSR. */
 export function Scanner({
@@ -46,6 +48,8 @@ export function Scanner({
     stop();
     setRaw(text.trim());
     setError("");
+    playAudioBeep.scanSuccess();
+    toast.success("Code détecté !", { description: text.trim() });
   };
   const start = async () => {
     stop();
@@ -132,15 +136,17 @@ export function Scanner({
                 : t("inv.fBarcode")}
         </DialogTitle>
         <DialogDescription>{t("scan.fallback")}</DialogDescription>
-        <video
-          ref={video}
-          autoPlay
-          muted
-          playsInline
-          className="scan-video"
-          hidden={!running}
-          aria-label={t("scan.camera")}
-        />
+        <div className={running ? "scan-video-wrapper" : ""}>
+          <video
+            ref={video}
+            autoPlay
+            muted
+            playsInline
+            className="scan-video"
+            hidden={!running}
+            aria-label={t("scan.camera")}
+          />
+        </div>
         <div className="form-actions">
           <Button type="button" onClick={() => void start()} disabled={pending || running}>
             <Camera />

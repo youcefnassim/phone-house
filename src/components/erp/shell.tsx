@@ -291,6 +291,17 @@ function LocalShell({ children }: { children: ReactNode }) {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
+              <button
+                type="button"
+                className="quick-palette-trigger"
+                onClick={() => {
+                  const event = new KeyboardEvent("keydown", { key: "k", ctrlKey: true });
+                  document.dispatchEvent(event);
+                }}
+                title="Palette de commandes (Ctrl+K)"
+              >
+                <kbd>Ctrl K</kbd>
+              </button>
             </label>
             {needle && (
               <div className="search-results">

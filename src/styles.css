@@ -4921,3 +4921,162 @@ table th {
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
+
+/* =========================================================================
+   UI/UX Enhancement Suite: Quick Palette, Hotkeys, Stock Badges & Touch
+   ========================================================================= */
+
+/* Topbar quick command palette trigger badge */
+.quick-palette-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 3px 8px;
+  margin-inline: 6px;
+  font-size: 11px;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+  flex-shrink: 0;
+}
+.quick-palette-trigger:hover {
+  background: var(--accent);
+  color: var(--foreground);
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(18, 56, 201, 0.15);
+}
+.quick-palette-trigger kbd {
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* POS Cashier Hotkeys Strip */
+.pos-hotkeys-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 11px;
+  color: var(--muted-foreground);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.pos-hotkey-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+.pos-hotkey-badge kbd {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--foreground);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Real-Time Stock Status Badges */
+.stock-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 12px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.stock-pill.in-stock {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+.stock-pill.low-stock {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+.stock-pill.out-of-stock {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+.stock-pill.phone-stock {
+  background: rgba(18, 56, 201, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(18, 56, 201, 0.22);
+}
+
+.dark .stock-pill.in-stock {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+.dark .stock-pill.low-stock {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+.dark .stock-pill.out-of-stock {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+.dark .stock-pill.phone-stock {
+  background: rgba(18, 56, 201, 0.25);
+  color: #93c5fd;
+}
+
+/* Touch & Mobile button target minimum sizes */
+@media (max-width: 768px) {
+  .product-stock button,
+  .basket button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Scanner Camera Reticle Overlay */
+.scan-video-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+  border: 2px solid var(--primary);
+  box-shadow: 0 4px 20px rgba(18, 56, 201, 0.2);
+}
+.scan-video-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffc21a, var(--primary), #ffc21a, transparent);
+  box-shadow: 0 0 12px #ffc21a;
+  transform: translateY(-50%);
+  animation: scanLaser 2s infinite ease-in-out;
+  pointer-events: none;
+}
+@keyframes scanLaser {
+  0%, 100% {
+    top: 25%;
+    opacity: 0.6;
+  }
+  50% {
+    top: 75%;
+    opacity: 1;
+  }
+}

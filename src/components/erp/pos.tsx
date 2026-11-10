@@ -19,7 +19,10 @@ import {
   ArrowRightLeft,
   Wallet,
   ShieldAlert,
+  Maximize2,
 } from "lucide-react";
+import { toast } from "sonner";
+import { playAudioBeep } from "@/lib/audio-feedback";
 import { Button } from "@/components/ui/button";
 import { demoAreas } from "@/data/demo";
 import {
@@ -155,6 +158,33 @@ export function Pos() {
         .toLowerCase()
         .includes(query.toLowerCase()),
   );
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const isInput =
+        target?.tagName === "INPUT" || target?.tagName === "TEXTAREA" || target?.tagName === "SELECT";
+
+      if (e.key === "F1") {
+        e.preventDefault();
+        input.current?.focus();
+        input.current?.select();
+      } else if (e.key === "F2") {
+        e.preventDefault();
+        setScan((s) => !s);
+      } else if (e.key === "F4" && cart.length > 0 && !checkout) {
+        e.preventDefault();
+        setCheckout(true);
+      } else if (e.key === "Escape") {
+        if (scan) setScan(false);
+        else if (checkout) setCheckout(false);
+        else if (isInput) target?.blur();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [cart.length, checkout, scan]);
+
   const add = (item: StockItem) => {
     try {
       const next = addToCart(cart, item);
@@ -162,7 +192,12 @@ export function Pos() {
       setPayment(null);
       setSaved(false);
       setError("");
+      playAudioBeep.scanSuccess();
+      toast.success(item.name, {
+        description: `${formatMoney(item.amount)} · ${item.kind === "phone" ? `IMEI: ${(item as { imei?: string }).imei ?? "—"}` : "Accessoire ajouté"}`,
+      });
     } catch (e) {
+      playAudioBeep.warning();
       setError(localizeMessage(lang, e instanceof Error ? e.message : t("pos.cannotAdd")));
     }
   };
@@ -266,6 +301,13 @@ export function Pos() {
             {notice}
           </p>
         ))}
+      <div className="pos-hotkeys-strip">
+        <span className="pos-hotkey-badge"><kbd>F1</kbd> {t("pos.scanPlaceholder")}</span>
+        <span className="pos-hotkey-badge"><kbd>F2</kbd> {t("scan.title")}</span>
+        <span className="pos-hotkey-badge"><kbd>F4</kbd> {t("pos.checkout")}</span>
+        <span className="pos-hotkey-badge"><kbd>Ctrl+K</kbd> Palette</span>
+        <span className="pos-hotkey-badge"><kbd>Échap</kbd> {t("common.cancel")}</span>
+      </div>
       <div className="pos-layout">
         <section className="pos-products">
           <form
@@ -345,33 +387,48 @@ export function Pos() {
             ))}
           </div>
           <div className="product-grid">
-            {products.map((item) => (
-              <Button
-                variant="outline"
-                className="pos-product"
-                key={item.id}
-                onClick={() => add(item)}
-              >
-                <span className={`product-icon ${item.kind === "phone" ? "blue" : "teal"}`}>
-                  {item.kind === "phone" ? <Smartphone size={32} /> : <Headphones size={32} />}
-                </span>
-                <strong>{item.name}</strong>
-                <small>{item.detail}</small>
-                {item.kind === "phone" && (
-                  <span className="serialized-id ltr">
-                    IMEI {item.imei} · {localizeMessage(lang, item.condition)}
+            {products.map((item) => {
+              const qty = Number(item.quantity ?? 1);
+              const isPhone = item.kind === "phone";
+              return (
+                <Button
+                  variant="outline"
+                  className="pos-product"
+                  key={item.id}
+                  onClick={() => add(item)}
+                >
+                  <span className={`product-icon ${isPhone ? "blue" : "teal"}`}>
+                    {isPhone ? <Smartphone size={32} /> : <Headphones size={32} />}
                   </span>
-                )}
-                <span className="ltr">{formatMoney(item.amount ?? "0")}</span>
-                <span className="product-stock">
-                  {item.kind === "phone"
-                    ? t("pos.serializedUnit")
-                    : `${item.quantity} ${t("pos.syntheticUnits")}`}{" "}
-                  · {item.store}
-                  <Plus size={15} />
-                </span>
-              </Button>
-            ))}
+                  <div className="flex items-center justify-between w-full">
+                    <strong>{item.name}</strong>
+                    {isPhone ? (
+                      <span className="stock-pill phone-stock">Unique</span>
+                    ) : qty > 3 ? (
+                      <span className="stock-pill in-stock">{qty} en stock</span>
+                    ) : qty > 0 ? (
+                      <span className="stock-pill low-stock">{qty} restants</span>
+                    ) : (
+                      <span className="stock-pill out-of-stock">Rupture</span>
+                    )}
+                  </div>
+                  <small>{item.detail}</small>
+                  {isPhone && (
+                    <span className="serialized-id ltr">
+                      IMEI {item.imei} · {localizeMessage(lang, item.condition)}
+                    </span>
+                  )}
+                  <span className="ltr">{formatMoney(item.amount ?? "0")}</span>
+                  <span className="product-stock">
+                    {isPhone
+                      ? t("pos.serializedUnit")
+                      : `${item.quantity} ${t("pos.syntheticUnits")}`}{" "}
+                    · {item.store}
+                    <Plus size={15} />
+                  </span>
+                </Button>
+              );
+            })}
           </div>
           {!products.length && (
             <div className="empty-state">
@@ -633,6 +690,10 @@ export function Pos() {
                     setGivenName("");
                     setBuyerContact("");
                     setSaved(true);
+                    playAudioBeep.saleSuccess();
+                    toast.success("Vente enregistrée avec succès !", {
+                      description: `Ticket #${sale.id} · Total: ${formatMoney(sale.total)}`,
+                    });
                     setNotice(t("pos.sessionDraft"));
                     setCart([]);
                     setPaymentValue(emptyPosPayment);
