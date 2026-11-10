@@ -14,6 +14,16 @@ export async function localD1AdapterHarness() {
     compatibilityDate: "2026-08-06",
     d1Databases: ["DB", "RESTORE"],
   });
+  // A setup failure must not leak the workerd process into later tests.
+  try {
+    return await setup(mf);
+  } catch (error) {
+    await mf.dispose().catch(() => undefined);
+    throw error;
+  }
+}
+
+async function setup(mf: Miniflare) {
   const db = await mf.getD1Database("DB");
   const restore = await mf.getD1Database("RESTORE");
   const files = sqliteMigrations;
@@ -118,6 +128,8 @@ export async function localD1AdapterHarness() {
       loseCommand = true;
     },
     dispose: async () => {
+      // Drop keep-alive sockets so close() cannot wait on an idle client.
+      server.closeAllConnections();
       await new Promise<void>((resolve, reject) =>
         server.close((error) => (error ? reject(error) : resolve())),
       );
