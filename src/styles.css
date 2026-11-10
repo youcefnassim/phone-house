@@ -1761,12 +1761,6 @@ h1 {
   }
 }
 @media (max-width: 1279px) {
-  .sidebar {
-    width: 215px;
-  }
-  .erp-main {
-    margin-left: 215px;
-  }
   .brand {
     padding-left: 16px;
     font-size: 12px;
@@ -1839,12 +1833,6 @@ h1 {
   }
 }
 @media (max-width: 1023px) {
-  .sidebar {
-    width: 200px;
-  }
-  .erp-main {
-    margin-left: 200px;
-  }
   .brand {
     font-size: 11px;
   }
@@ -3721,22 +3709,8 @@ main {
   font-size: 12px;
 }
 @media (max-width: 1279px) {
-  .sidebar {
-    width: 230px;
-  }
-  .erp-main {
-    margin-left: 230px;
-  }
-  [dir="rtl"] .erp-main {
-    margin-right: 230px;
-  }
   .topbar {
-    padding: 12px 20px;
-  }
-  .toolbar-search {
-    max-width: none;
-    order: 3;
-    flex-basis: 100%;
+    padding: 10px 18px;
   }
   .brand {
     padding-inline: 16px;
@@ -3769,18 +3743,8 @@ main {
   }
 }
 @media (max-width: 767px) {
-  .sidebar {
-    width: 260px;
-  }
-  .erp-main,
-  [dir="rtl"] .erp-main {
-    margin-inline: 0;
-  }
   .topbar {
-    padding: 10px 12px;
-  }
-  .breadcrumb {
-    max-width: 100px;
+    padding: 8px 12px;
   }
   .topbar-actions {
     flex: 1;
@@ -5252,4 +5216,276 @@ table th {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+/* =========================================================================
+   Master Responsive Engine: Sidebar Lockstep, Zero Horizontal Scroll, Grids
+   ========================================================================= */
+
+/* 1. Global Viewport Overflow Fix: eliminate horizontal scrollbar */
+html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+.erp-layout {
+  min-height: 100vh;
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+/* 2. Responsive Sidebar Width & Margin Lockstep */
+:root {
+  --ph-sidebar-w: 245px;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --ph-sidebar-w: 220px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --ph-sidebar-w: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --ph-sidebar-w: 0px;
+  }
+}
+
+.sidebar,
+.native-layout .sidebar {
+  width: var(--ph-sidebar-w, 245px) !important;
+  position: fixed !important;
+  inset-block: 0 !important;
+  inset-inline-start: 0 !important;
+  inset-inline-end: auto !important;
+  background: var(--sidebar-bg) !important;
+  border-inline-end: 1px solid var(--border) !important;
+  border-inline-start: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 40 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  transition: transform 0.25s ease !important;
+}
+
+.erp-main,
+.native-layout .erp-main {
+  margin-inline-start: var(--ph-sidebar-w, 245px) !important;
+  margin-inline-end: 0 !important;
+  width: calc(100% - var(--ph-sidebar-w, 245px)) !important;
+  max-width: calc(100% - var(--ph-sidebar-w, 245px)) !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* Mobile Sidebar Drawer */
+@media (max-width: 768px) {
+  .sidebar,
+  .native-layout .sidebar {
+    width: 250px !important;
+    transform: translateX(-100%) !important;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.3) !important;
+  }
+  [dir="rtl"] .sidebar,
+  [dir="rtl"] .native-layout .sidebar {
+    transform: translateX(100%) !important;
+  }
+  .sidebar.sidebar-open,
+  .native-layout .sidebar.sidebar-open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+  .erp-main,
+  .native-layout .erp-main {
+    margin-inline: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+}
+
+/* 3. Sidebar Brand Header & Clean Logo Proportions */
+.sidebar .brand,
+.native-layout .sidebar .brand {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 120px !important;
+  padding: 16px 14px 12px !important;
+  border-bottom: 1px solid var(--border) !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.sidebar .brand .official-brand-logo,
+.native-layout .sidebar .brand .official-brand-logo {
+  width: 95px !important;
+  height: 95px !important;
+  max-width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  display: block !important;
+  margin: 0 auto !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* 4. Single-Row Robust Topbar */
+.topbar,
+.native-topbar {
+  min-height: 64px !important;
+  height: auto !important;
+  background: var(--card) !important;
+  border-bottom: 1px solid var(--border) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 10px 22px !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.breadcrumb {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  max-width: none !important;
+}
+
+.breadcrumb strong {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--foreground) !important;
+}
+
+.toolbar-search,
+.native-header-search {
+  flex: 1 1 auto !important;
+  max-width: 440px !important;
+  min-width: 130px !important;
+  position: relative !important;
+  order: unset !important;
+}
+
+.toolbar-search label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.toolbar-search input,
+.native-header-search input {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.topbar-actions {
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+@media (max-width: 960px) {
+  .toolbar-search,
+  .native-header-search {
+    max-width: 260px !important;
+    min-width: 90px !important;
+  }
+  .pill-subtitle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar,
+  .native-topbar {
+    padding: 8px 12px !important;
+    gap: 8px !important;
+  }
+  .toolbar-search,
+  .native-header-search {
+    display: none !important;
+  }
+  .breadcrumb strong {
+    font-size: 13px !important;
+  }
+}
+
+/* 5. Dashboard Metrics & Grids */
+.metrics-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+  min-width: 0 !important;
+}
+
+.metric {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.metric > strong {
+  overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 1180px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .metrics-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+.overview-grid,
+.bottom-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 290px !important;
+  gap: 20px !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 1080px) {
+  .overview-grid,
+  .bottom-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+.ledger-line-panel {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.ledger-line-chart {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
 }
