@@ -361,7 +361,7 @@ function LocalShell({ children }: { children: ReactNode }) {
                 {actor?.role === "SUPER_ADMIN" ? "SA" : actor?.role === "MANAGER" ? "M2" : "S"}
               </span>
               <div className="pill-user-info">
-                <span className="pill-title">{displayName(lang, actor?.name ?? "Propriétaire")}</span>
+                <span className="pill-title">{displayName(lang, actor?.name ?? "Propriétaire").split("(")[0].trim()}</span>
                 <span className="pill-subtitle">
                   {scope === "ALL" ? t("shell.allStores") : scope} · {languages.find((l) => l.code === lang)?.label ?? "FR"}
                 </span>
