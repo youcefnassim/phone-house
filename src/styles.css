@@ -5080,3 +5080,176 @@ table th {
     opacity: 1;
   }
 }
+
+/* =========================================================================
+   Unified Topbar Pill Button & Dropdown Control Panel
+   Replaces multiple scattered selectors into ONE sleek, compact button
+   ========================================================================= */
+
+.topbar-actions {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  flex-wrap: nowrap !important;
+  max-width: none !important;
+}
+
+.topbar-unified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 12px 4px 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  max-height: 40px;
+}
+.topbar-unified-pill:hover,
+.topbar-unified-pill[aria-expanded="true"] {
+  border-color: var(--primary);
+  background: var(--accent);
+  box-shadow: 0 2px 8px rgba(18, 56, 201, 0.12);
+}
+.topbar-unified-pill .top-avatar {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.pill-user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.15;
+}
+[dir="rtl"] .pill-user-info {
+  text-align: right;
+}
+.pill-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--foreground);
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pill-subtitle {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pill-chevron {
+  color: var(--muted-foreground);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.pill-alert-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.7);
+  flex-shrink: 0;
+}
+
+/* Dropdown Menu Panel */
+.topbar-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 300px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 100;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+[dir="rtl"] .topbar-dropdown-menu {
+  right: auto;
+  left: 0;
+}
+.topbar-dropdown-menu:not(.open) {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+.topbar-dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.dropdown-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dropdown-control-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+.dropdown-select-wrap {
+  position: relative;
+  width: 100%;
+}
+.dropdown-select-wrap select,
+.dropdown-native-select {
+  width: 100%;
+  height: 34px;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  padding: 0 10px;
+  font-size: 12px;
+  color: var(--foreground);
+  outline: none;
+  cursor: pointer;
+}
+.dropdown-select-wrap select:focus,
+.dropdown-native-select:focus {
+  border-color: var(--primary);
+}
+.dropdown-footer {
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

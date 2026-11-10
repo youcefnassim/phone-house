@@ -1,7 +1,7 @@
 import { routeAllowed } from "@/domain/permissions";
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Link, useLocation, useRouterState } from "@tanstack/react-router";
-import { Menu, Moon, Sun, Search, X } from "lucide-react";
+import { Menu, Moon, Sun, Search, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { createNativeRepository, type NativeTransportStatus } from "@/data/native-repository";
@@ -57,6 +57,24 @@ export function NativeShell({ topBar }: { topBar?: ReactNode } = {}) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [results, setResults] = useState<{ id: string; name: string; barcode: string }[]>([]);
+  const [controlMenuOpen, setControlMenuOpen] = useState(false);
+  const controlMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setControlMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (controlMenuRef.current && !controlMenuRef.current.contains(e.target as Node)) {
+        setControlMenuOpen(false);
+      }
+    };
+    if (controlMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [controlMenuOpen]);
   useEffect(() => {
     let active = true;
     void repository
@@ -217,41 +235,79 @@ export function NativeShell({ topBar }: { topBar?: ReactNode } = {}) {
                 <Search />
               </Button>
             </form>
-            <div className="topbar-actions">
-              <select
+            <div className="topbar-actions" ref={controlMenuRef}>
+              <button
+                type="button"
+                className="topbar-unified-pill"
+                aria-expanded={controlMenuOpen}
                 aria-label={t("shell.storeScope")}
-                value={store}
-                disabled={!owner}
-                onChange={(e) => {
-                  setStore(e.target.value === "M02" ? "M02" : "M01");
-                  setResults([]);
-                }}
+                onClick={() => setControlMenuOpen(!controlMenuOpen)}
               >
-                <option value="M01">Magasin 1 (M01)</option>
-                <option value="M02">Magasin 2 (M02)</option>
-              </select>
-              <select
-                aria-label={t("shell.language")}
-                value={ui.lang}
-                onChange={(e) => {
-                  const language = languages.find((l) => l.code === e.target.value);
-                  if (language) ui.setLang(language.code);
-                }}
-              >
-                {languages.map((l) => (
-                  <option key={l.code} value={l.code}>
-                    {l.label}
-                  </option>
-                ))}
-              </select>
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label={t(ui.dark ? "shell.lightTheme" : "shell.darkTheme")}
-                onClick={ui.toggleTheme}
-              >
-                {ui.dark ? <Sun /> : <Moon />}
-              </Button>
+                <span className="avatar top-avatar">M</span>
+                <div className="pill-user-info">
+                  <span className="pill-title">{store === "M02" ? "Magasin 2" : "Magasin 1"}</span>
+                  <span className="pill-subtitle">{languages.find((l) => l.code === ui.lang)?.label ?? "FR"}</span>
+                </div>
+                <ChevronDown size={14} className={`pill-chevron ${controlMenuOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              <div className={`topbar-dropdown-menu ${controlMenuOpen ? "open" : ""}`}>
+                <div className="dropdown-profile-header">
+                  <div className="flex items-center gap-2">
+                    <span className="avatar top-avatar">M</span>
+                    <span className="font-semibold text-sm">{store === "M02" ? "Magasin 2 (M02)" : "Magasin 1 (M01)"}</span>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    aria-label={t(ui.dark ? "shell.lightTheme" : "shell.darkTheme")}
+                    onClick={ui.toggleTheme}
+                  >
+                    {ui.dark ? <Sun size={15} /> : <Moon size={15} />}
+                  </Button>
+                </div>
+
+                <div className="dropdown-control-group">
+                  <label className="dropdown-control-label">
+                    <span>{t("shell.storeScope")}</span>
+                  </label>
+                  <select
+                    className="dropdown-native-select"
+                    aria-label={t("shell.storeScope")}
+                    value={store}
+                    disabled={!owner}
+                    onChange={(e) => {
+                      setStore(e.target.value === "M02" ? "M02" : "M01");
+                      setResults([]);
+                    }}
+                  >
+                    <option value="M01">Magasin 1 (M01)</option>
+                    <option value="M02">Magasin 2 (M02)</option>
+                  </select>
+                </div>
+
+                <div className="dropdown-control-group">
+                  <label className="dropdown-control-label">
+                    <span>{t("shell.language")}</span>
+                  </label>
+                  <select
+                    className="dropdown-native-select"
+                    aria-label={t("shell.language")}
+                    value={ui.lang}
+                    onChange={(e) => {
+                      const language = languages.find((l) => l.code === e.target.value);
+                      if (language) ui.setLang(language.code);
+                    }}
+                  >
+                    {languages.map((l) => (
+                      <option key={l.code} value={l.code}>
+                        {l.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
             </div>
           </header>
           <main aria-busy={transitioning}>

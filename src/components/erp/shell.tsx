@@ -1,5 +1,5 @@
 import { Link, useLocation, useRouterState } from "@tanstack/react-router";
-import { useState, useEffect, type ReactNode } from "react";
+import { useState, useEffect, useRef, type ReactNode } from "react";
 import {
   LayoutDashboard,
   ScanLine,
@@ -28,6 +28,7 @@ import {
   Search,
   PanelLeftClose,
   Languages,
+  User,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BrandLogo } from "./brand-logo";
@@ -194,9 +195,25 @@ function LocalShell({ children }: { children: ReactNode }) {
       scope === "ALL" ? (actor.stores[0] ?? "M01") : scope,
       pathname,
     );
+  const [controlMenuOpen, setControlMenuOpen] = useState(false);
+  const controlMenuRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setOpen(false);
+    setControlMenuOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (controlMenuRef.current && !controlMenuRef.current.contains(e.target as Node)) {
+        setControlMenuOpen(false);
+      }
+    };
+    if (controlMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [controlMenuOpen]);
   useEffect(() => {
     if (transitioning) document.title = `${titleText} | Phone House Maghnia`;
   }, [transitioning, titleText]);
@@ -331,95 +348,184 @@ function LocalShell({ children }: { children: ReactNode }) {
               </div>
             )}
           </div>
-          <div className="topbar-actions">
-            <label className="store-select">
-              <Languages size={15} />
-              <select
-                aria-label={t("shell.language")}
-                value={lang}
-                onChange={(e) => setLang(e.target.value as Language)}
-              >
-                {languages.map((l) => (
-                  <option key={l.code} value={l.code}>
-                    {l.label}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown size={13} />
-            </label>
-            <label className="store-select">
-              <select
-                aria-label={t("staff.operatorPreview")}
-                value={actor?.id ?? "U-OWN"}
-                onChange={(e) => setReviewActor(e.target.value)}
-              >
-                {workspaceIdentities(ws)
-                  .filter((u) => u.active)
-                  .map((u) => (
-                    <option key={u.id} value={u.id}>
-                      {displayName(lang, u.name)}
-                    </option>
-                  ))}
-              </select>
-            </label>
-            <label className="store-select">
-              <Landmark size={15} />
-              <select
-                aria-label={t("shell.storeScope")}
-                value={scope}
-                disabled={actor?.role !== "SUPER_ADMIN"}
-                onChange={(e) => setScope(e.target.value as Scope)}
-              >
-                <option value="ALL">{t("shell.allStores")}</option>
-                <option value="M01">{t("shell.store1")}</option>
-                <option value="M02">{t("shell.store2")}</option>
-              </select>
-              <ChevronDown size={13} />
-            </label>
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label={dark ? t("shell.lightTheme") : t("shell.darkTheme")}
-              title={dark ? t("shell.lightTheme") : t("shell.darkTheme")}
-              onClick={toggleTheme}
+          <div className="topbar-actions" ref={controlMenuRef}>
+            {/* The single unified pill button */}
+            <button
+              type="button"
+              className="topbar-unified-pill"
+              aria-expanded={controlMenuOpen}
+              aria-label={t("staff.operatorPreview")}
+              onClick={() => setControlMenuOpen(!controlMenuOpen)}
             >
-              {dark ? <Sun /> : <Moon />}
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link to="/settings" aria-label={t("nav.settings")} title={t("nav.settings")}>
-                <Settings />
-              </Link>
-            </Button>
-            <div className="notification-wrap">
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label={t("design.notifications")}
-                title={t("design.notifications")}
-                aria-expanded={notifications}
-                onClick={() => setNotifications(!notifications)}
-              >
-                <Bell />
-              </Button>
-              {notifications && (
-                <div className="notification-panel">
-                  <strong>{t("design.alerts")}</strong>
-                  <p>
-                    <Link to="/stock/accessories" onClick={() => setNotifications(false)}>
-                      {t("inv.accTitle")} · {ledger.lowStock}
-                    </Link>
-                  </p>
-                  <p>
-                    <Link to="/cash" onClick={() => setNotifications(false)}>
-                      {t("cash.reviewPending")} · {ledger.pendingReviews}
-                    </Link>
-                  </p>
-                </div>
+              <span className="avatar top-avatar">
+                {actor?.role === "SUPER_ADMIN" ? "SA" : actor?.role === "MANAGER" ? "M2" : "S"}
+              </span>
+              <div className="pill-user-info">
+                <span className="pill-title">{displayName(lang, actor?.name ?? "Propriétaire")}</span>
+                <span className="pill-subtitle">
+                  {scope === "ALL" ? t("shell.allStores") : scope} · {languages.find((l) => l.code === lang)?.label ?? "FR"}
+                </span>
+              </div>
+              <ChevronDown size={14} className={`pill-chevron ${controlMenuOpen ? "rotate-180" : ""}`} />
+              {(ledger.lowStock > 0 || ledger.pendingReviews > 0) && (
+                <span className="pill-alert-dot" />
               )}
+            </button>
+
+            {/* The unified dropdown panel */}
+            <div className={`topbar-dropdown-menu ${controlMenuOpen ? "open" : ""}`}>
+              {/* Profile Card Header */}
+              <div className="dropdown-profile-header">
+                <div className="flex items-center gap-2.5">
+                  <span className="avatar top-avatar">
+                    {actor?.role === "SUPER_ADMIN" ? "SA" : actor?.role === "MANAGER" ? "M2" : "S"}
+                  </span>
+                  <div>
+                    <div className="font-semibold text-sm leading-tight">{displayName(lang, actor?.name)}</div>
+                    <div className="text-xs text-muted-foreground">{actor?.role}</div>
+                  </div>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-8 w-8"
+                  aria-label={dark ? t("shell.lightTheme") : t("shell.darkTheme")}
+                  title={dark ? t("shell.lightTheme") : t("shell.darkTheme")}
+                  onClick={toggleTheme}
+                >
+                  {dark ? <Sun size={15} /> : <Moon size={15} />}
+                </Button>
+              </div>
+
+              {/* Setting 1: Magasin */}
+              <div className="dropdown-control-group">
+                <label className="dropdown-control-label">
+                  <Landmark size={13} />
+                  <span>{t("shell.storeScope")}</span>
+                </label>
+                <div className="store-select dropdown-select-wrap">
+                  <select
+                    aria-label={t("shell.storeScope")}
+                    value={scope}
+                    disabled={actor?.role !== "SUPER_ADMIN"}
+                    onChange={(e) => setScope(e.target.value as Scope)}
+                  >
+                    <option value="ALL">{t("shell.allStores")}</option>
+                    <option value="M01">{t("shell.store1")}</option>
+                    <option value="M02">{t("shell.store2")}</option>
+                  </select>
+                  <ChevronDown size={13} />
+                </div>
+              </div>
+
+              {/* Setting 2: Langue */}
+              <div className="dropdown-control-group">
+                <label className="dropdown-control-label">
+                  <Languages size={13} />
+                  <span>{t("shell.language")}</span>
+                </label>
+                <div className="store-select dropdown-select-wrap">
+                  <select
+                    aria-label={t("shell.language")}
+                    value={lang}
+                    onChange={(e) => setLang(e.target.value as Language)}
+                  >
+                    {languages.map((l) => (
+                      <option key={l.code} value={l.code}>
+                        {l.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown size={13} />
+                </div>
+              </div>
+
+              {/* Setting 3: Opérateur test / Profil */}
+              <div className="dropdown-control-group">
+                <label className="dropdown-control-label">
+                  <User size={13} />
+                  <span>{t("staff.operatorPreview")}</span>
+                </label>
+                <div className="store-select dropdown-select-wrap">
+                  <select
+                    aria-label={t("staff.operatorPreview")}
+                    value={actor?.id ?? "U-OWN"}
+                    onChange={(e) => setReviewActor(e.target.value)}
+                  >
+                    {workspaceIdentities(ws)
+                      .filter((u) => u.active)
+                      .map((u) => (
+                        <option key={u.id} value={u.id}>
+                          {displayName(lang, u.name)}
+                        </option>
+                      ))}
+                  </select>
+                  <ChevronDown size={13} />
+                </div>
+              </div>
+
+              {/* Footer Links & Alerts */}
+              <div className="dropdown-footer">
+                <Button variant="ghost" size="sm" asChild className="w-full justify-start text-xs h-8">
+                  <Link
+                    to="/settings"
+                    aria-label={t("nav.settings")}
+                    title={t("nav.settings")}
+                    onClick={() => setControlMenuOpen(false)}
+                  >
+                    <Settings size={14} className="mr-2" />
+                    <span>{t("nav.settings")}</span>
+                  </Link>
+                </Button>
+
+                <div className="notification-wrap w-full mt-1">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="w-full justify-between text-xs h-8"
+                    aria-label={t("design.notifications")}
+                    title={t("design.notifications")}
+                    aria-expanded={notifications}
+                    onClick={() => setNotifications(!notifications)}
+                  >
+                    <span className="flex items-center gap-2">
+                      <Bell size={14} />
+                      <span>{t("design.alerts")}</span>
+                    </span>
+                    <span className="count-chip text-[10px]">
+                      {ledger.lowStock + ledger.pendingReviews}
+                    </span>
+                  </Button>
+                  {notifications && (
+                    <div className="notification-panel">
+                      <strong>{t("design.alerts")}</strong>
+                      <p>
+                        <Link
+                          to="/stock/accessories"
+                          onClick={() => {
+                            setNotifications(false);
+                            setControlMenuOpen(false);
+                          }}
+                        >
+                          {t("inv.accTitle")} · {ledger.lowStock}
+                        </Link>
+                      </p>
+                      <p>
+                        <Link
+                          to="/cash"
+                          onClick={() => {
+                            setNotifications(false);
+                            setControlMenuOpen(false);
+                          }}
+                        >
+                          {t("cash.reviewPending")} · {ledger.pendingReviews}
+                        </Link>
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
-            <span className="avatar top-avatar">
-              {actor?.role === "SUPER_ADMIN" ? "SA" : actor?.role === "MANAGER" ? "M2" : "S"}
-            </span>
           </div>
         </header>
         <main aria-busy={transitioning}>
