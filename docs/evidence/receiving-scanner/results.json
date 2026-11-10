@@ -1,0 +1,218 @@
+[
+  {
+    "name": "fr-DZ_1440 compact packaging collapsed",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 denied camera manual fallback",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 explicit QR fields",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 omitted packaging unknown",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 unit code",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 label print twice no mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 isolated label CODE128",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 real CODE128 ZXing roundtrip",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 generated SKU barcode",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 same SKU +5 price preserved",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 own-store phone scan Enter",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 own-store accessory scan Enter",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 cross-store phone excluded",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 cross-store accessory excluded",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 reload retained receiving",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 direction",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 no horizontal overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 no runtime errors",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 compact packaging collapsed",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 denied camera manual fallback",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 explicit QR fields",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 omitted packaging unknown",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 unit code",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 label print twice no mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 isolated label CODE128",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 real CODE128 ZXing roundtrip",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 generated SKU barcode",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 same SKU +5 price preserved",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 own-store phone scan Enter",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 own-store accessory scan Enter",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 cross-store phone excluded",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 cross-store accessory excluded",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 reload retained receiving",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 direction",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 no horizontal overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 no runtime errors",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 compact packaging collapsed",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 denied camera manual fallback",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 explicit QR fields",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 omitted packaging unknown",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 unit code",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 label print twice no mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 isolated label CODE128",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 real CODE128 ZXing roundtrip",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 generated SKU barcode",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 same SKU +5 price preserved",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 own-store phone scan Enter",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 own-store accessory scan Enter",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 cross-store phone excluded",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 cross-store accessory excluded",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 reload retained receiving",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 direction",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 no horizontal overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 no runtime errors",
+    "status": "PASS"
+  }
+]

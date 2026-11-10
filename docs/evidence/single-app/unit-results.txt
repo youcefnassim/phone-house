@@ -1,0 +1,49 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/dev-server[39m
+
+(node:24260) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24266) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24301) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m src/test/sqlite-native.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 279[2mms[22m[39m
+ [32m✓[39m src/test/native-api.test.ts [2m([22m[2m15 tests[22m[2m)[22m[33m 669[2mms[22m[39m
+ [32m✓[39m src/test/native-wave.test.ts [2m([22m[2m20 tests[22m[2m)[22m[33m 727[2mms[22m[39m
+ [32m✓[39m src/test/production-outbox.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 217[2mms[22m[39m
+ [32m✓[39m src/test/transactions.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m src/test/test-workspace.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 118[2mms[22m[39m
+ [32m✓[39m src/test/test-workflows.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m src/test/local-review.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 1317[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves existing records across revision migration, reload and queued writes [33m 722[2mms[22m[39m
+     [33m[2m✓[22m[39m empty start clears local ledger and fixture references and survives a fresh hydration without reseed [33m 587[2mms[22m[39m
+ [32m✓[39m src/test/test-documents.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 130[2mms[22m[39m
+ [32m✓[39m src/test/external-backend.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 153[2mms[22m[39m
+ [32m✓[39m src/test/i18n.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 332[2mms[22m[39m
+     [33m[2m✓[22m[39m every language defines every key with non-empty text [33m 302[2mms[22m[39m
+ [32m✓[39m src/test/operations.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 524[2mms[22m[39m
+     [33m[2m✓[22m[39m validates receiving form before delivering an isolated draft [33m 416[2mms[22m[39m
+ [32m✓[39m src/test/navigation-pending.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 742[2mms[22m[39m
+     [33m[2m✓[22m[39m never presents the old overview as cash content while the cash module downloads [33m 415[2mms[22m[39m
+ [32m✓[39m src/test/business-forms.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1104[2mms[22m[39m
+     [33m[2m✓[22m[39m Customer rejects empty submission and delivers validated values only [33m 366[2mms[22m[39m
+ [32m✓[39m src/test/native-page.test.tsx [2m([22m[2m48 tests[22m[2m)[22m[33m 6692[2mms[22m[39m
+   [33m[2m✓[22m[39m confidential finance panel: owner sees unknown cost, manager gets server refusal [33m 3093[2mms[22m[39m
+ [32m✓[39m src/test/review11.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 42[2mms[22m[39m
+ [32m✓[39m src/test/business-domain.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m src/test/review08.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m src/test/backend-preflight.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/test/review09.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/test/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m src/test/native-repository.test.ts [2m([22m[2m37 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m src/test/supplier-sav-commands.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/test/session-store.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m src/test/erp-domain.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/test/ledger-view.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/test/app-routing.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m27 passed[39m[22m[90m (27)[39m
+[2m      Tests [22m [1m[32m373 passed[39m[22m[90m (373)[39m
+[2m   Start at [22m 13:31:00
+[2m   Duration [22m 22.95s[2m (transform 14.43s, setup 63.13s, import 27.87s, tests 13.54s, environment 154.21s)[22m
+

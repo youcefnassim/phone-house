@@ -1,0 +1,44 @@
+{
+  "routes": [
+    { "path": "/", "title": "Executive Overview | Phone House Maghnia", "visibleText": 2408 },
+    { "path": "/pos", "title": "Point of Sale | Phone House Maghnia", "visibleText": 1608 },
+    { "path": "/cash", "title": "Cash Registers | Phone House Maghnia", "visibleText": 1549 },
+    {
+      "path": "/stock/phones",
+      "title": "Phones Inventory | Phone House Maghnia",
+      "visibleText": 1531
+    },
+    {
+      "path": "/stock/accessories",
+      "title": "Accessories Inventory | Phone House Maghnia",
+      "visibleText": 1652
+    },
+    {
+      "path": "/catalog",
+      "title": "Catalog & Barcodes | Phone House Maghnia",
+      "visibleText": 2442
+    },
+    { "path": "/transfers", "title": "Transfers | Phone House Maghnia", "visibleText": 1209 },
+    { "path": "/customers", "title": "Customers | Phone House Maghnia", "visibleText": 1398 },
+    { "path": "/debts", "title": "Customer Debts | Phone House Maghnia", "visibleText": 1348 },
+    { "path": "/suppliers", "title": "Suppliers | Phone House Maghnia", "visibleText": 1305 },
+    { "path": "/purchases", "title": "Purchases | Phone House Maghnia", "visibleText": 1461 },
+    { "path": "/expenses", "title": "Expenses | Phone House Maghnia", "visibleText": 1359 },
+    {
+      "path": "/facility",
+      "title": "Facility Agreements | Phone House Maghnia",
+      "visibleText": 1387
+    },
+    { "path": "/sav", "title": "Warranty & SAV | Phone House Maghnia", "visibleText": 1414 },
+    { "path": "/reports", "title": "Financial Reports | Phone House Maghnia", "visibleText": 1414 },
+    { "path": "/users", "title": "Users & Roles | Phone House Maghnia", "visibleText": 2514 },
+    { "path": "/audit", "title": "Audit History | Phone House Maghnia", "visibleText": 1449 },
+    {
+      "path": "/settings",
+      "title": "Workspace Settings | Phone House Maghnia",
+      "visibleText": 1235
+    },
+    { "path": "/auth", "title": "Sign In | Phone House Maghnia", "visibleText": 264 }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,21 @@
+/** Single ordered migration manifest for isolated SQLite and D1 test databases. */
+export const sqliteMigrations = [
+  "0001_erp.sql",
+  "0002_command_integrity.sql",
+  "0003_documents_offline_replay.sql",
+  "0004_identity_subjects.sql",
+  "0005_supplier_provenance.sql",
+  "0006_checkout_aggregate.sql",
+  "0007_standalone_receiving.sql",
+  "0008_supplier_name_keys.sql",
+  "0009_customer_no_automerge.sql",
+  "0010_audit_time.sql",
+  "0011_app_settings.sql",
+  "0012_invoice_numbering.sql",
+  "0013_pos_settlement_void.sql",
+  "0014_cash_credit.sql",
+  "0015_suppliers_transfers_counts.sql",
+  "0016_sav_used_purchase.sql",
+  "0017_sav_credit_return.sql",
+  "0018_sav_credit_line_return.sql",
+];

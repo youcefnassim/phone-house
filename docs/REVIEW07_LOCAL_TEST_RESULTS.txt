@@ -1,0 +1,19 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/dev-server[39m
+
+ [32m✓[39m src/test/session-store.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m src/test/business-domain.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m src/test/erp-domain.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m src/test/backend-preflight.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m src/test/transactions.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/test/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m src/test/navigation-pending.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 354[2mms[22m[39m
+ [32m✓[39m src/test/operations.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 310[2mms[22m[39m
+ [32m✓[39m src/test/business-forms.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 638[2mms[22m[39m
+ [32m✓[39m src/test/app-routing.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m10 passed[39m[22m[90m (10)[39m
+[2m      Tests [22m [1m[32m112 passed[39m[22m[90m (112)[39m
+[2m   Start at [22m 14:35:45
+[2m   Duration [22m 4.59s[2m (transform 2.14s, setup 8.57s, import 4.77s, tests 1.49s, environment 18.83s)[22m
+

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "en phone supplier/store/operator",
+    "status": "PASS"
+  },
+  {
+    "name": "en receiver owner history hidden",
+    "status": "PASS"
+  },
+  {
+    "name": "en owner source visible",
+    "status": "PASS"
+  },
+  {
+    "name": "en two separate supplier receipt lots",
+    "status": "PASS"
+  },
+  {
+    "name": "en owner both receipt names",
+    "status": "PASS"
+  },
+  {
+    "name": "en reload retains both receipts",
+    "status": "PASS"
+  },
+  {
+    "name": "en no overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "en no runtime errors",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ phone supplier/store/operator",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ receiver owner history hidden",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ owner source visible",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ two separate supplier receipt lots",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ owner both receipt names",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ reload retains both receipts",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ no overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ no runtime errors",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ phone supplier/store/operator",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ receiver owner history hidden",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ owner source visible",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ two separate supplier receipt lots",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ owner both receipt names",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ reload retains both receipts",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ no overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ no runtime errors",
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "language": "fr-DZ",
+    "width": 1440,
+    "theme": "light",
+    "intake_reload_scanner": true,
+    "route_checks": 15,
+    "page_errors": []
+  },
+  {
+    "language": "en",
+    "width": 768,
+    "theme": "dark",
+    "intake_reload_scanner": true,
+    "route_checks": 15,
+    "page_errors": []
+  },
+  {
+    "language": "ar-DZ",
+    "width": 390,
+    "theme": "dark",
+    "intake_reload_scanner": true,
+    "route_checks": 15,
+    "page_errors": []
+  }
+]

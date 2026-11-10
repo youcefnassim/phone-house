@@ -1,0 +1,206 @@
+[
+  {
+    "name": "en_768 intake own store",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 scanner Enter phone",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 phone buyer blocked",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 customer staged until confirmation",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 warranty initially unchosen",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 one sale sold phone buyer warranty",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 cash exact",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 print twice pure",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 dedicated history readback",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 history reopen specimen",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 reload persisted",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 customer purchase history",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 POS camera permission fallback",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 own-store scanner rejects other store",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 direction",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 viewport no overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "en_768 no runtime error",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 intake own store",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 scanner Enter phone",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 phone buyer blocked",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 customer staged until confirmation",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 warranty initially unchosen",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 one sale sold phone buyer warranty",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 cash exact",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 print twice pure",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 dedicated history readback",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 history reopen specimen",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 reload persisted",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 customer purchase history",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 POS camera permission fallback",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 own-store scanner rejects other store",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 direction",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 viewport no overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "fr-DZ_1440 no runtime error",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 intake own store",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 scanner Enter phone",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 phone buyer blocked",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 customer staged until confirmation",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 warranty initially unchosen",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 one sale sold phone buyer warranty",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 cash exact",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 print twice pure",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 dedicated history readback",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 history reopen specimen",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 reload persisted",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 customer purchase history",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 POS camera permission fallback",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 own-store scanner rejects other store",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 direction",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 viewport no overflow",
+    "status": "PASS"
+  },
+  {
+    "name": "ar-DZ_390 no runtime error",
+    "status": "PASS"
+  }
+]

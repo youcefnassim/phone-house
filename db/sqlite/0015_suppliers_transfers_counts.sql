@@ -1,0 +1,37 @@
+-- Additive Batch 4a. Private finance never selected by operational projections.
+CREATE TABLE supplier_contacts(supplier_id TEXT PRIMARY KEY REFERENCES suppliers(id),phone TEXT NOT NULL) STRICT;
+CREATE TABLE supplier_costs(id TEXT PRIMARY KEY,command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),store_id TEXT NOT NULL REFERENCES stores(id),source_id TEXT NOT NULL,phone_id TEXT REFERENCES phones(id),supplier_id TEXT NOT NULL REFERENCES suppliers(id),amount_minor INTEGER NOT NULL CHECK(amount_minor BETWEEN 1 AND 99999999999999),actor_id TEXT NOT NULL REFERENCES accounts(id),at INTEGER NOT NULL) STRICT;
+CREATE UNIQUE INDEX supplier_cost_one_phone ON supplier_costs(phone_id) WHERE phone_id IS NOT NULL;
+CREATE UNIQUE INDEX supplier_cost_one_lot ON supplier_costs(source_id) WHERE phone_id IS NULL;
+CREATE TABLE supplier_payments(id TEXT PRIMARY KEY,command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),supplier_id TEXT NOT NULL REFERENCES suppliers(id),store_id TEXT NOT NULL REFERENCES stores(id),amount_minor INTEGER NOT NULL CHECK(amount_minor BETWEEN 1 AND 99999999999999),method TEXT NOT NULL CHECK(method IN('Cash','Bank')),bank_method TEXT,shift_id TEXT REFERENCES shifts(id),actor_id TEXT NOT NULL REFERENCES accounts(id),at INTEGER NOT NULL) STRICT;
+CREATE VIEW supplier_payables AS SELECT s.id supplier_id,COALESCE((SELECT sum(amount_minor) FROM supplier_costs WHERE supplier_id=s.id),0) cost_minor,COALESCE((SELECT sum(amount_minor) FROM supplier_payments WHERE supplier_id=s.id),0) paid_minor,COALESCE((SELECT sum(amount_minor) FROM supplier_costs WHERE supplier_id=s.id),0)-COALESCE((SELECT sum(amount_minor) FROM supplier_payments WHERE supplier_id=s.id),0) balance_minor FROM suppliers s;
+ALTER TABLE transfer_dispatches ADD COLUMN carrier TEXT NOT NULL DEFAULT '';
+CREATE TABLE transfer_arrivals(transfer_id TEXT NOT NULL,item_id TEXT NOT NULL,quantity INTEGER NOT NULL CHECK(quantity>0),damaged INTEGER NOT NULL CHECK(damaged IN(0,1)),PRIMARY KEY(transfer_id,item_id),FOREIGN KEY(transfer_id,item_id) REFERENCES transfer_lines(transfer_id,item_id)) STRICT;
+CREATE TABLE transfer_discrepancies(transfer_id TEXT NOT NULL,item_id TEXT NOT NULL,quantity INTEGER NOT NULL CHECK(quantity>0),kind TEXT NOT NULL CHECK(kind IN('MISSING','DAMAGED')),PRIMARY KEY(transfer_id,item_id),FOREIGN KEY(transfer_id,item_id) REFERENCES transfer_lines(transfer_id,item_id)) STRICT;
+CREATE TABLE transfer_resolutions(transfer_id TEXT NOT NULL,item_id TEXT NOT NULL,outcome TEXT NOT NULL CHECK(outcome IN('RETURN','WRITE_OFF')),reason TEXT NOT NULL CHECK(length(trim(reason))>0),command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),actor_id TEXT NOT NULL REFERENCES accounts(id),at INTEGER NOT NULL,PRIMARY KEY(transfer_id,item_id),FOREIGN KEY(transfer_id,item_id) REFERENCES transfer_discrepancies(transfer_id,item_id)) STRICT;
+CREATE TABLE transfer_cancellations(transfer_id TEXT PRIMARY KEY REFERENCES transfers(id),command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),actor_id TEXT NOT NULL REFERENCES accounts(id),reason TEXT NOT NULL CHECK(length(trim(reason))>0),at INTEGER NOT NULL) STRICT;
+CREATE TABLE stock_counts(id TEXT PRIMARY KEY,store_id TEXT NOT NULL REFERENCES stores(id),month TEXT NOT NULL,state TEXT NOT NULL CHECK(state IN('OPEN','SUBMITTED')),actor_id TEXT NOT NULL REFERENCES accounts(id),opened_at INTEGER NOT NULL,submitted_at INTEGER,UNIQUE(store_id,month)) STRICT;
+CREATE TABLE count_expected(count_id TEXT NOT NULL REFERENCES stock_counts(id),item_id TEXT NOT NULL,kind TEXT NOT NULL CHECK(kind IN('phone','accessory')),quantity INTEGER NOT NULL CHECK(quantity>=0),PRIMARY KEY(count_id,item_id,kind)) STRICT;
+CREATE TABLE count_entries(count_id TEXT NOT NULL REFERENCES stock_counts(id),item_id TEXT NOT NULL,kind TEXT NOT NULL CHECK(kind IN('phone','accessory')),quantity INTEGER NOT NULL CHECK(quantity>=0),PRIMARY KEY(count_id,item_id,kind)) STRICT;
+CREATE TABLE stock_adjustments(id TEXT PRIMARY KEY,command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),store_id TEXT NOT NULL REFERENCES stores(id),item_id TEXT NOT NULL REFERENCES catalog(id),delta INTEGER NOT NULL CHECK(delta<>0),reason TEXT NOT NULL CHECK(length(trim(reason))>0),count_id TEXT REFERENCES stock_counts(id),actor_id TEXT NOT NULL REFERENCES accounts(id),at INTEGER NOT NULL) STRICT;
+CREATE TABLE stock_adjustment_reviews(adjustment_id TEXT PRIMARY KEY REFERENCES stock_adjustments(id),command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),outcome TEXT NOT NULL CHECK(outcome IN('OK','FLAGGED')),note TEXT NOT NULL,actor_id TEXT NOT NULL REFERENCES accounts(id),at INTEGER NOT NULL) STRICT;
+CREATE TRIGGER count_entry_open BEFORE INSERT ON count_entries WHEN NOT EXISTS(SELECT 1 FROM stock_counts WHERE id=NEW.count_id AND state='OPEN') BEGIN SELECT RAISE(ABORT,'REJECTED'); END;
+CREATE TRIGGER count_entry_update_open BEFORE UPDATE ON count_entries WHEN NOT EXISTS(SELECT 1 FROM stock_counts WHERE id=NEW.count_id AND state='OPEN') BEGIN SELECT RAISE(ABORT,'REJECTED'); END;
+CREATE TRIGGER immutable_supplier_costs_update BEFORE UPDATE ON supplier_costs BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_supplier_costs_delete BEFORE DELETE ON supplier_costs BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_supplier_payments_update BEFORE UPDATE ON supplier_payments BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_supplier_payments_delete BEFORE DELETE ON supplier_payments BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_transfer_discrepancies_update BEFORE UPDATE ON transfer_discrepancies BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_transfer_discrepancies_delete BEFORE DELETE ON transfer_discrepancies BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_transfer_resolutions_update BEFORE UPDATE ON transfer_resolutions BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_transfer_resolutions_delete BEFORE DELETE ON transfer_resolutions BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_transfer_cancellations_update BEFORE UPDATE ON transfer_cancellations BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_transfer_cancellations_delete BEFORE DELETE ON transfer_cancellations BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_stock_adjustments_update BEFORE UPDATE ON stock_adjustments BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_stock_adjustments_delete BEFORE DELETE ON stock_adjustments BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_stock_adjustment_reviews_update BEFORE UPDATE ON stock_adjustment_reviews BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_stock_adjustment_reviews_delete BEFORE DELETE ON stock_adjustment_reviews BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_count_expected_update BEFORE UPDATE ON count_expected BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_count_expected_delete BEFORE DELETE ON count_expected BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+
+CREATE UNIQUE INDEX count_item_adjustment_once ON stock_adjustments(count_id,item_id) WHERE count_id IS NOT NULL;

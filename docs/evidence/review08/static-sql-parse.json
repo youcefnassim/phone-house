@@ -1,0 +1,62 @@
+[
+  {
+    "file": "db/proposed/0001_core_stores_users_roles.sql",
+    "statements": 45,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0002_inventory.sql",
+    "statements": 42,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0003_sales_cash.sql",
+    "statements": 60,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0004_purchasing.sql",
+    "statements": 35,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0005_facility_transfers_sav.sql",
+    "statements": 56,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0006_audit_offline.sql",
+    "statements": 30,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0007_transaction_commands.sql",
+    "statements": 51,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0008_relational_guards.sql",
+    "statements": 72,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0009_reads_provisioning.sql",
+    "statements": 16,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0010_posting_integrity.sql",
+    "statements": 28,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0011_review08_inventory_provenance.sql",
+    "statements": 77,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  },
+  {
+    "file": "db/proposed/0012_review08_boundaries_reads.sql",
+    "statements": 33,
+    "status": "top-level syntax parsed; function bodies NOT compiled"
+  }
+]

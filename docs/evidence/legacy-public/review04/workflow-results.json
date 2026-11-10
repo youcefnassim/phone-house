@@ -1,0 +1,14 @@
+{
+  "results": [
+    "Customer create, validation, edit and profile readback",
+    "Debt linked sale draft, overpayment blocked, partial repayment outstanding 27899.99",
+    "Supplier draft and document history",
+    "Purchase order, duplicate phone blocked, phone receipt, accessory batch, owner-only finance and supplier payment draft",
+    "Expense category and amount/document draft with unconfigured approval",
+    "Transfer all six draft stages, both scoped approvals, discrepancy and partial receipt blocks, full barcode receipt",
+    "M01 contract three explicit months, salary/bank evidence separate, delayed partial remittance and M02 forbidden",
+    "Exchange request, service history, cumulative refund review and evidence attachment metadata"
+  ],
+  "pageerrors": [],
+  "screenshots": 76
+}

@@ -1,0 +1,176 @@
+{
+  "routes": [
+    {
+      "url": "/",
+      "heading": "Executive overview.",
+      "title": "Executive Overview | Phone House Maghnia",
+      "active": ["Overview"],
+      "breadcrumb": ["Overview"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/pos",
+      "heading": "Point of sale.",
+      "title": "Point of Sale | Phone House Maghnia",
+      "active": ["Point of salePOS"],
+      "breadcrumb": ["Point of sale"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/cash",
+      "heading": "Cash registers.",
+      "title": "Cash Registers | Phone House Maghnia",
+      "active": ["Cash registers"],
+      "breadcrumb": ["Cash registers"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/stock/phones",
+      "heading": "Phones inventory.",
+      "title": "Phones Inventory | Phone House Maghnia",
+      "active": ["Phones"],
+      "breadcrumb": ["Phones"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/stock/accessories",
+      "heading": "Accessories inventory.",
+      "title": "Accessories Inventory | Phone House Maghnia",
+      "active": ["Accessories"],
+      "breadcrumb": ["Accessories"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/catalog",
+      "heading": "Catalog & barcodes.",
+      "title": "Catalog & Barcodes | Phone House Maghnia",
+      "active": ["Catalog & barcodes"],
+      "breadcrumb": ["Catalog & barcodes"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/transfers",
+      "heading": "Inter-store transfers.",
+      "title": "Transfers | Phone House Maghnia",
+      "active": ["Transfers"],
+      "breadcrumb": ["Transfers"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/customers",
+      "heading": "Customers.",
+      "title": "Customers | Phone House Maghnia",
+      "active": ["Customers"],
+      "breadcrumb": ["Customers"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/debts",
+      "heading": "Customer debts.",
+      "title": "Customer Debts | Phone House Maghnia",
+      "active": ["Customer debts"],
+      "breadcrumb": ["Customer debts"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/suppliers",
+      "heading": "Suppliers.",
+      "title": "Suppliers | Phone House Maghnia",
+      "active": ["Suppliers"],
+      "breadcrumb": ["Suppliers"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/purchases",
+      "heading": "Purchases & receipts.",
+      "title": "Purchases | Phone House Maghnia",
+      "active": ["Purchases"],
+      "breadcrumb": ["Purchases"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/expenses",
+      "heading": "Expenses.",
+      "title": "Expenses | Phone House Maghnia",
+      "active": ["Expenses"],
+      "breadcrumb": ["Expenses"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/facility",
+      "heading": "Facility agreements.",
+      "title": "Facility Agreements | Phone House Maghnia",
+      "active": ["Facility agreements"],
+      "breadcrumb": ["Facility agreements"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/sav",
+      "heading": "Warranty & SAV.",
+      "title": "Warranty & SAV | Phone House Maghnia",
+      "active": ["Warranty & SAV"],
+      "breadcrumb": ["Warranty & SAV"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/reports",
+      "heading": "Financial reports.",
+      "title": "Financial Reports | Phone House Maghnia",
+      "active": ["Financial reports"],
+      "breadcrumb": ["Financial reports"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/users",
+      "heading": "Users & roles.",
+      "title": "Users & Roles | Phone House Maghnia",
+      "active": ["Users & roles"],
+      "breadcrumb": ["Users & roles"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/audit",
+      "heading": "Audit history.",
+      "title": "Audit History | Phone House Maghnia",
+      "active": ["Audit history"],
+      "breadcrumb": ["Audit history"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/settings",
+      "heading": "Workspace settings.",
+      "title": "Workspace Settings | Phone House Maghnia",
+      "active": ["Settings"],
+      "breadcrumb": ["Settings"],
+      "direct": "verified",
+      "refresh": "verified"
+    },
+    {
+      "url": "/auth",
+      "heading": "Welcome back.",
+      "title": "Sign In | Phone House Maghnia",
+      "active": [],
+      "breadcrumb": [],
+      "direct": "verified",
+      "refresh": "verified"
+    }
+  ],
+  "pageerrors": []
+}

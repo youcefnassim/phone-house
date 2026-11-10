@@ -1,0 +1,14 @@
+test_expired_approval (test_review08_safety.IsolationRules.test_expired_approval) ... ok
+test_external_network_rejected (test_review08_safety.IsolationRules.test_external_network_rejected) ... ok
+test_forwarding_rejected (test_review08_safety.IsolationRules.test_forwarding_rejected) ... ok
+test_host_mount_rejected (test_review08_safety.IsolationRules.test_host_mount_rejected) ... ok
+test_owner_approval_required (test_review08_safety.IsolationRules.test_owner_approval_required) ... ok
+test_reset_requires_distinct_approval (test_review08_safety.IsolationRules.test_reset_requires_distinct_approval) ... ok
+test_synthetic_only_required (test_review08_safety.IsolationRules.test_synthetic_only_required) ... ok
+test_valid_offline_identity (test_review08_safety.IsolationRules.test_valid_offline_identity) ... ok
+test_wrong_immutable_identity (test_review08_safety.IsolationRules.test_wrong_immutable_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

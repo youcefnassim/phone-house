@@ -1,0 +1,157 @@
+[
+  {
+    "test": "phone intake → stock persisted after reload (Available, M01, price 45000.50)",
+    "result": "PASS",
+    "evidence": "{'id': 'TPH-0001', 'kind': 'phone', 'name': 'E2E Phone X', 'detail': '128 GB · Black', 'store': 'M01', 'status': 'Available', 'imei': '359111111111119', 'imei2': '359111111111127', 'condition': 'NEW', 'packaging': 'SEALED', 'category': 'E2E', 'amount': '45000.50', 'code': 'E2EPH01', 'draft': {'name'"
+  },
+  {
+    "test": "duplicate IMEI (IMEI2 reused as IMEI1) rejected; no record added",
+    "result": "PASS",
+    "evidence": "An identifier is already present in the demo inventory."
+  },
+  {
+    "test": "cash shift opened on M01 drawer",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "invalid underpayment rejected",
+    "result": "PASS",
+    "evidence": "Entered amount is below the basket total. Credit and partial-payment policies are unconfigured."
+  },
+  {
+    "test": "intake → POS → cash sale: exactly ONE sale after repeated submit, phone Sold, change 4999.50, cash movement linked (after reload)",
+    "result": "PASS",
+    "evidence": "TS-0003"
+  },
+  {
+    "test": "accessory receive +5 with RECEIVING movement (after reload)",
+    "result": "PASS",
+    "evidence": "20->25"
+  },
+  {
+    "test": "accessory sell −1 with SALE movement matching sale (after reload)",
+    "result": "PASS",
+    "evidence": "25->24"
+  },
+  {
+    "test": "debt detail separates figures after reload: obligation 100000.00, confirmed paid 0.00, drafts 40000.25, projected 59999.75",
+    "result": "PASS",
+    "evidence": "{'debt-obligation': '100 000 DZD', 'debt-recorded-paid': '0 DZD', 'debt-draft-repayments': '40 000.25 DZD', 'debt-projected': '59 999.75 DZD', 'debt-confirmed-outstanding': '100 000 DZD'}"
+  },
+  {
+    "test": "overpayment 59999.76 rejected",
+    "result": "PASS",
+    "evidence": "Amount exceeds outstanding balance."
+  },
+  {
+    "test": "POS shows warning when basket phone is on an undispatched transfer; sale still allowed",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "transfer flagged (badge + alert), advance disabled, revalidation refuses empty, stage unchanged, phone Sold at M01, not at M02 (after reload)",
+    "result": "PASS",
+    "evidence": "badge=1 alert=1 disabled=True rv=Stock conflict — review required\n\nThese items are no longer available in the source store (for example sold at the POS): PH-006. The transfer cannot advance or be approved until it is revalidated. No item is reserved and no sale is overridden.\n\nRevalidate: remove una"
+  },
+  {
+    "test": "blind close: expected hidden during count; M01 shift closed with counted 1.00 persisted",
+    "result": "PASS",
+    "evidence": "[{\"id\": \"TSH-0002\", \"store\": \"M01\", \"drawer\": \"DRAWER-M01\", \"seller\": \"Test seller 001\", \"openedAt\": \"2026-11-07T02:20:33.625Z\", \"opening\": \"5000\", \"status\": \"CLOSED\", \"closedAt\": \"2026-11-07T02:21:15.054Z\", \"counted\": \"1\", \"expectedAtClose\": \"149800"
+  },
+  {
+    "test": "M02 scope hides M01 phones; facility M01-only in M02 scope",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "audit actions localized in FR and AR (no raw English action codes)",
+    "result": "PASS",
+    "evidence": "{'fr-DZ': [], 'ar-DZ': []}"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 1440x900 /customers",
+    "result": "PASS",
+    "evidence": "(True, True, 'Add customer')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 1440x900 /transfers",
+    "result": "PASS",
+    "evidence": "(True, True, 'Transfer draft')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 1440x900 /debts",
+    "result": "PASS",
+    "evidence": "(True, True, 'Debt draft')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 1440x900 /pos review",
+    "result": "PASS",
+    "evidence": "(True, True, 'Review test basket')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 768x1024 /customers",
+    "result": "PASS",
+    "evidence": "(True, True, 'Add customer')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 768x1024 /transfers",
+    "result": "PASS",
+    "evidence": "(True, True, 'Transfer draft')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 768x1024 /debts",
+    "result": "PASS",
+    "evidence": "(True, True, 'Debt draft')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 768x1024 /pos review",
+    "result": "PASS",
+    "evidence": "(True, True, 'Review test basket')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 390x844 /customers",
+    "result": "PASS",
+    "evidence": "(True, True, 'Add customer')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 390x844 /transfers",
+    "result": "PASS",
+    "evidence": "(True, True, 'Transfer draft')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 390x844 /debts",
+    "result": "PASS",
+    "evidence": "(True, True, 'Debt draft')"
+  },
+  {
+    "test": "keyboard focus trap + Escape + focus return 390x844 /pos review",
+    "result": "PASS",
+    "evidence": "(True, True, 'Review test basket')"
+  },
+  {
+    "test": "108 route renders (18 routes × 3 locales × 2 themes) with no horizontal overflow at 1280px",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "no common English UI words in FR/AR route text (heuristic, not proof of full translation)",
+    "result": "PASS",
+    "evidence": "{}"
+  },
+  {
+    "test": "AR mobile 390×844: no horizontal overflow on 5 routes or transfer dialog",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "reset restores fixture: no sales/transfers/debts, intake phone gone, PH-002 Available",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "no page errors",
+    "result": "PASS",
+    "evidence": ""
+  }
+]

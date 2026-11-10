@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": [
+    "FR server connection status",
+    "IndexedDB duplicate prevention",
+    "policy-blocked no dispatch",
+    "reload persisted readback",
+    "AR dark mobile no overflow",
+    "EN status"
+  ],
+  "pageErrors": [],
+  "databaseExecution": "NOT RUN",
+  "hostedAuth": "NOT RUN"
+}

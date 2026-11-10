@@ -1,0 +1,25 @@
+test_A_store_isolation (__main__.PostgreSQLAcceptance.test_A_store_isolation) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_B_cross_slot_global_imei (__main__.PostgreSQLAcceptance.test_B_cross_slot_global_imei) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_C_receiving_exact_balance_and_audit (__main__.PostgreSQLAcceptance.test_C_receiving_exact_balance_and_audit) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_D_one_open_shift_race (__main__.PostgreSQLAcceptance.test_D_one_open_shift_race) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_E_mixed_checkout (__main__.PostgreSQLAcceptance.test_E_mixed_checkout) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_F_bound_replay (__main__.PostgreSQLAcceptance.test_F_bound_replay) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_G_blind_close_and_closed_shift (__main__.PostgreSQLAcceptance.test_G_blind_close_and_closed_shift) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_H_private_finance_projection (__main__.PostgreSQLAcceptance.test_H_private_finance_projection) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_I_last_stock_concurrency (__main__.PostgreSQLAcceptance.test_I_last_stock_concurrency) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_J_complete_rollback_on_late_payment_failure (__main__.PostgreSQLAcceptance.test_J_complete_rollback_on_late_payment_failure) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_K_mixed_store_roles_and_revocation (__main__.PostgreSQLAcceptance.test_K_mixed_store_roles_and_revocation) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_L_precision_preserved_and_excess_rejected (__main__.PostgreSQLAcceptance.test_L_precision_preserved_and_excess_rejected) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_M_catalog_effective_permissions (__main__.PostgreSQLAcceptance.test_M_catalog_effective_permissions) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_N_future_creator_global_default_execute (__main__.PostgreSQLAcceptance.test_N_future_creator_global_default_execute) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_O_repayment_cumulative_concurrency (__main__.PostgreSQLAcceptance.test_O_repayment_cumulative_concurrency) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_P_identity_immutable (__main__.PostgreSQLAcceptance.test_P_identity_immutable) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_Q_nonuniform_facility_schedule (__main__.PostgreSQLAcceptance.test_Q_nonuniform_facility_schedule) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_R_same_store_foreign_keys (__main__.PostgreSQLAcceptance.test_R_same_store_foreign_keys) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_S_transfer_forged_approval_and_scan (__main__.PostgreSQLAcceptance.test_S_transfer_forged_approval_and_scan) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+test_T_repeated_refund_cap (__main__.PostgreSQLAcceptance.test_T_repeated_refund_cap) ... skipped 'NOT RUN: owner authorization for isolated database absent'
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.002s
+
+OK (skipped=20)

@@ -1,0 +1,14 @@
+import asyncio,json
+from pathlib import Path
+from playwright.async_api import async_playwright
+R=[];ROOT=Path(__file__).parent
+def rec(n,v):R.append({'name':n,'status':'PASS' if v else 'FAIL'});print(R[-1],flush=True)
+async def main():
+ async with async_playwright() as p:
+  b=await p.chromium.launch(headless=True);c=await b.new_context(viewport={'width':1280,'height':1800});pg=await c.new_page();await pg.goto('http://localhost:8080');await pg.evaluate("localStorage.setItem('ph-lang','en')");await pg.goto('http://localhost:8080/stock/phones');await pg.wait_for_timeout(1400)
+  await pg.locator('.heading-actions button').last.click();d=pg.get_by_role('dialog').last;rec('serial visible when no IMEI',await d.locator('[name=serial]').is_visible());await d.locator('.scan-field-heading button').first.click();scan=pg.get_by_role('dialog').last;await scan.locator('input').fill('490154203237518 356938035643809');await scan.locator('form button').click();rec('ambiguous QR no assignment offer',await scan.get_by_role('button',name='Assign identifiers').count()==0);await pg.keyboard.press('Escape');d=pg.get_by_role('dialog').last
+  for name,value in [('brand','Review'),('name','Serial Phone'),('serial','SYNTHETIC-SERIAL'),('salePrice','900')]:await d.locator('[name='+name+']').fill(value)
+  await d.locator('[name=store]').select_option('M01');await d.locator('[name=condition]').select_option('USED');await d.locator('form button[type=submit]').click();await pg.wait_for_timeout(300);rec('serial-only phone accepted',await pg.get_by_role('dialog').last.locator('.encoded-label').count()==1);await pg.keyboard.press('Escape');await pg.goto('http://localhost:8080/pos');await pg.wait_for_timeout(1400);await pg.locator('.scanner-field input').fill('SYNTHETIC-SERIAL');await pg.locator('.scanner-field input').press('Enter');await pg.wait_for_timeout(300);rec('serial search Enter POS',await pg.locator('.basket-line').count()==1)
+  await pg.goto('http://localhost:8080/stock/accessories');await pg.wait_for_timeout(1300);await pg.locator('.heading-actions button').last.click();d=pg.get_by_role('dialog').last;await d.locator('[name=barcode]').fill('AC000001');await pg.wait_for_timeout(200);rec('keyboard manufacturer barcode maps existing SKU',await d.locator('[name=sku]').input_value()=='AC-001' and await d.locator('[name=name]').input_value()!='');await d.locator('[name=quantity]').fill('5');await d.locator('form button[type=submit]').click();await pg.wait_for_timeout(400);rec('mapped receiving success',await pg.get_by_role('dialog').last.locator('.encoded-label').count()==1);await pg.get_by_role('dialog').last.screenshot(path=str(ROOT/'mapped_accessory.png'))
+  ROOT.joinpath('results.json').write_text(json.dumps(R,indent=2));print('TOTAL',len(R),'PASS',sum(x['status']=='PASS' for x in R),'FAIL',sum(x['status']=='FAIL' for x in R));await b.close()
+asyncio.run(main())

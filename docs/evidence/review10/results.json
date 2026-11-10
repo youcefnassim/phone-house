@@ -1,0 +1,87 @@
+[
+  {
+    "test": "customer created and persisted after reload",
+    "result": "PASS",
+    "evidence": "DRAFT-C-1"
+  },
+  {
+    "test": "cash shift open M01",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "customer\u2192POS credit request draft (100000.00 outstanding, stock+cash unchanged, after reload)",
+    "result": "PASS",
+    "evidence": "{\"id\": \"DRAFT-TCR-0002\", \"customerId\": \"DRAFT-C-1\", \"store\": \"M01\", \"saleReference\": \"TCR-0002\", \"amount\": \"100000.00\", \"dueDate\": \"2026-12-31\", \"authorizationReference\": \"AUTH-E2E\", \"notes\": \"1\\u00d7 Samsung Galaxy S24\", \"source\": \"Session draft\"}"
+  },
+  {
+    "test": "POS cash sale linked to customer + cash movement (after reload)",
+    "result": "PASS",
+    "evidence": "TS-0003"
+  },
+  {
+    "test": "partial repayment 40000.25 stored; outstanding preview 59999.75",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "overpayment 59999.76 rejected with visible error",
+    "result": "PASS",
+    "evidence": "Amount exceeds outstanding balance."
+  },
+  {
+    "test": "dispatch blocked without approvals",
+    "result": "PASS",
+    "evidence": "Both Super Admin and M02 Manager approvals are required."
+  },
+  {
+    "test": "in transit: phone not available at destination",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "incomplete scan blocks completion; foreign IMEI rejected",
+    "result": "PASS",
+    "evidence": "Every item must be scanned before completion. Partial receipt is blocked (OD unresolved). | Scanned code is not on this transfer manifest."
+  },
+  {
+    "test": "transfer completed after full scan; phone available at M02 (after reload)",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "M01 facility contract linked to test customer",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "bank remittance without evidence document rejected",
+    "result": "PASS",
+    "evidence": "Bank remittance requires an attached bank evidence document."
+  },
+  {
+    "test": "bank evidence draft stored unverified, separate from cash (after reload)",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "SAV case linked to sold unit; duplicate open case rejected; unit not restocked",
+    "result": "PASS",
+    "evidence": "An open service case already exists for this sold unit."
+  },
+  {
+    "test": "facility unavailable in M02 scope",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "reset clears local test records",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "no page errors",
+    "result": "PASS",
+    "evidence": ""
+  }
+]

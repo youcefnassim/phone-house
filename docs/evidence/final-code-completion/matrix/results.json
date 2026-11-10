@@ -1,0 +1,2738 @@
+[
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "fr-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 1440,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 768,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": false,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/pos",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/stock/phones",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/stock/accessories",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/cash",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/sales",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/customers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/suppliers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/purchases",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/transfers",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/facility",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/sav",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/debts",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/expenses",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/catalog",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/reports",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/users",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/audit",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "lang": "ar-DZ",
+    "width": 390,
+    "dark": true,
+    "path": "/settings",
+    "pass": true,
+    "errors": []
+  }
+]

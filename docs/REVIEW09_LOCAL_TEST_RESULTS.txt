@@ -1,0 +1,23 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/dev-server[39m
+
+ [32m✓[39m src/test/erp-domain.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/test/review09.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m src/test/backend-preflight.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m src/test/transactions.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 77[2mms[22m[39m
+ [32m✓[39m src/test/business-domain.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 87[2mms[22m[39m
+ [32m✓[39m src/test/review08.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m src/test/session-store.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m src/test/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/test/navigation-pending.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 469[2mms[22m[39m
+     [33m[2m✓[22m[39m never presents the old overview as cash content while the cash module downloads [33m 312[2mms[22m[39m
+ [32m✓[39m src/test/operations.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 384[2mms[22m[39m
+     [33m[2m✓[22m[39m validates receiving form before delivering an isolated draft [33m 354[2mms[22m[39m
+ [32m✓[39m src/test/business-forms.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 907[2mms[22m[39m
+ [32m✓[39m src/test/app-routing.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m12 passed[39m[22m[90m (12)[39m
+[2m      Tests [22m [1m[32m138 passed[39m[22m[90m (138)[39m
+[2m   Start at [22m 15:34:06
+[2m   Duration [22m 9.05s[2m (transform 3.09s, setup 20.58s, import 7.38s, tests 2.18s, environment 52.25s)[22m
+

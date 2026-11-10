@@ -1,0 +1,27 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS French is default when language unset 
+PASS POS without open shift shows cash-blocked notice 
+PASS cash sale without open shift records nothing sales=0
+PASS M01 phone cannot be added to M02 basket  items selected
+
+No available test product in this store matches that barcode or IMEI.
+
+Subtotal
+0 DZD
+Discount
+Unconfigured
+Total
+0 DZD
+Cash
+Bank
+Review test b
+PASS no page errors (negative flows) []
+PASS 18 routes 390px fr-DZ light: content, no overflow, no errors []
+PASS 18 routes 390px ar-DZ dark: content, no overflow, no errors []
+PASS 18 routes 390px en dark: content, no overflow, no errors []
+PASS 18 routes 768px fr-DZ light: content, no overflow, no errors []
+PASS 18 routes 768px ar-DZ dark: content, no overflow, no errors []
+PASS 18 routes 768px en dark: content, no overflow, no errors []
+PASS 18 routes 1440px fr-DZ light: content, no overflow, no errors []
+PASS 18 routes 1440px ar-DZ dark: content, no overflow, no errors []
+PASS 18 routes 1440px en dark: content, no overflow, no errors []

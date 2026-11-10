@@ -1,0 +1,55 @@
+export const en = {
+  "be.title": "Cloudflare D1 / R2",
+  "be.NOT_CONNECTED": "Not connected",
+  "be.CONFIGURATION_INVALID": "Dedicated project configuration needs verification",
+  "be.CONFIGURED_NOT_VERIFIED": "Configured; authentication and persistence not yet verified",
+  "be.checking": "Checking connection configuration…",
+  "be.failed": "Connection status unavailable",
+  "be.action": "Not connected. No account, resources or deployment have been authorized.",
+  "be.boundary":
+    "Local test data remains separate. No migrations, real accounts or commercial payments have been executed.",
+  "be.policy.discount": "Discount authorization",
+  "be.policy.rounding": "Financial rounding",
+  "be.policy.credit": "Credit eligibility",
+  "be.policy.warranty": "Warranty and returns",
+  "be.policy.offline": "Offline identity and conflicts",
+  "be.policy.tax": "Tax and legal details",
+  "be.policy.zakat": "Zakat method",
+} as const;
+export const fr: Record<keyof typeof en, string> = {
+  "be.title": "Cloudflare D1 / R2",
+  "be.NOT_CONNECTED": "Non connectée",
+  "be.CONFIGURATION_INVALID": "La configuration du projet dédié doit être vérifiée",
+  "be.CONFIGURED_NOT_VERIFIED":
+    "Configurée ; connexion des utilisateurs et persistance non vérifiées",
+  "be.checking": "Vérification de la configuration…",
+  "be.failed": "État de connexion indisponible",
+  "be.action": "Non connecté. Aucun compte, aucune ressource ni aucun déploiement autorisé.",
+  "be.boundary":
+    "Les données de test locales restent séparées. Aucune migration, aucun compte réel ni paiement commercial n’a été exécuté.",
+  "be.policy.discount": "Autorisation des remises",
+  "be.policy.rounding": "Arrondi financier",
+  "be.policy.credit": "Éligibilité au crédit",
+  "be.policy.warranty": "Garantie et retours",
+  "be.policy.offline": "Identité hors connexion et conflits",
+  "be.policy.tax": "Fiscalité et mentions légales",
+  "be.policy.zakat": "Méthode de calcul de la zakat",
+};
+export const ar: Record<keyof typeof en, string> = {
+  "be.title": "Cloudflare D1 / R2",
+  "be.NOT_CONNECTED": "غير متصلة",
+  "be.CONFIGURATION_INVALID": "يجب التحقق من إعدادات المشروع المخصص",
+  "be.CONFIGURED_NOT_VERIFIED": "تم الإعداد؛ لم يتم التحقق من تسجيل الدخول وحفظ البيانات بعد",
+  "be.checking": "جارٍ التحقق من إعدادات الاتصال…",
+  "be.failed": "حالة الاتصال غير متاحة",
+  "be.action": "غير متصل. لم يُصرّح بربط حساب أو إنشاء موارد أو نشر.",
+  "be.boundary":
+    "تبقى بيانات الاختبار المحلية منفصلة. لم تُنفّذ عمليات ترحيل أو إنشاء حسابات حقيقية أو دفع تجاري.",
+  "be.policy.discount": "صلاحيات التخفيضات",
+  "be.policy.rounding": "التقريب المالي",
+  "be.policy.credit": "أهلية البيع بالدين",
+  "be.policy.warranty": "الضمان والإرجاع",
+  "be.policy.offline": "الهوية والتعارضات دون اتصال",
+  "be.policy.tax": "الضرائب والبيانات القانونية",
+  "be.policy.zakat": "طريقة حساب الزكاة",
+};

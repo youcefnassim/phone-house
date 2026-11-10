@@ -1,0 +1,298 @@
+[
+  {
+    "name": "accessory_None_Cash no buyer/warranty controls",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Cash history projection no ledger mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank no buyer/warranty controls",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "accessory_None_Bank history projection no ledger mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash exact warranty choice",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "new_1_Cash history projection no ledger mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank exact warranty choice",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "new_3_Bank history projection no ledger mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash exact warranty choice",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "new_12_Cash history projection no ledger mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash exact warranty choice",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "existing_None_Cash history projection no ledger mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash missing buyer blocks mixed sale",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash exact warranty choice",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "mixed_None_Cash history projection no ledger mutation",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash duplicate blocked with no new records",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash confirmed one sale",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash correct anonymous or linked buyer",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash customer count",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash cash only for cash tender",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash exact warranty choice",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash certificate availability",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash invoice print pure",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash reprint linked history",
+    "status": "PASS"
+  },
+  {
+    "name": "duplicate_None_Cash history projection no ledger mutation",
+    "status": "PASS"
+  }
+]

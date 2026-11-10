@@ -1,0 +1,3 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+TOTAL 342 PASS 342 FAIL 0
+

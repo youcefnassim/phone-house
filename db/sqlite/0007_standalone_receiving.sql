@@ -1,0 +1,8 @@
+-- Additive standalone receiving; existing receipt/source rows are untouched.
+CREATE TABLE standalone_receipts(id TEXT PRIMARY KEY,command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),store_id TEXT NOT NULL REFERENCES stores(id),item_id TEXT NOT NULL REFERENCES catalog(id),supplier_id TEXT REFERENCES suppliers(id),quantity INTEGER NOT NULL CHECK(quantity>0),received_at INTEGER NOT NULL,actor_id TEXT NOT NULL REFERENCES accounts(id),reference TEXT NOT NULL) STRICT;
+CREATE TABLE standalone_phone_receipts(phone_id TEXT PRIMARY KEY REFERENCES phones(id),receipt_id TEXT NOT NULL REFERENCES standalone_receipts(id)) STRICT;
+CREATE TABLE standalone_source_reviews(id INTEGER PRIMARY KEY,receipt_id TEXT NOT NULL REFERENCES standalone_receipts(id),command_key TEXT NOT NULL UNIQUE REFERENCES commands(key),old_supplier_id TEXT REFERENCES suppliers(id),new_supplier_id TEXT REFERENCES suppliers(id),actor_id TEXT NOT NULL REFERENCES accounts(id),reviewed_at INTEGER NOT NULL,reason TEXT NOT NULL CHECK(length(trim(reason))>0)) STRICT;
+CREATE TRIGGER standalone_no_update BEFORE UPDATE ON standalone_receipts BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER standalone_no_delete BEFORE DELETE ON standalone_receipts BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER standalone_review_no_update BEFORE UPDATE ON standalone_source_reviews BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER standalone_review_no_delete BEFORE DELETE ON standalone_source_reviews BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;

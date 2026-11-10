@@ -1,0 +1,347 @@
+[
+  {
+    "lang": "fr-DZ",
+    "check": "dashboard-visible",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "no-overflow",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/pos reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/cash reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/sales reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/stock/phones reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/stock/accessories reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/customers reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/suppliers reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/purchases reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/transfers reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/facility reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/sav reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/debts reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/expenses reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/catalog reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/reports reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/users reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/audit reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/settings reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "/ reload",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "global-search",
+    "pass": true
+  },
+  {
+    "lang": "fr-DZ",
+    "check": "search-navigation",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "dashboard-visible",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "no-overflow",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/pos reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/cash reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/sales reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/stock/phones reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/stock/accessories reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/customers reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/suppliers reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/purchases reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/transfers reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/facility reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/sav reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/debts reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/expenses reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/catalog reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/reports reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/users reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/audit reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/settings reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "/ reload",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "global-search",
+    "pass": true
+  },
+  {
+    "lang": "en",
+    "check": "search-navigation",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "dashboard-visible",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "no-overflow",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/pos reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/cash reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/sales reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/stock/phones reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/stock/accessories reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/customers reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/suppliers reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/purchases reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/transfers reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/facility reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/sav reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/debts reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/expenses reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/catalog reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/reports reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/users reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/audit reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/settings reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "/ reload",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "global-search",
+    "pass": true
+  },
+  {
+    "lang": "ar-DZ",
+    "check": "search-navigation",
+    "pass": true
+  }
+]

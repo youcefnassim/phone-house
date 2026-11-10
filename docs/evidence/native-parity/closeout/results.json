@@ -1,0 +1,66 @@
+[
+  {
+    "test": "four active operator choices",
+    "result": "PASS"
+  },
+  {
+    "test": "seller scoped to M01 only",
+    "result": "PASS"
+  },
+  {
+    "test": "seller 1 sale shares M01 drawer",
+    "result": "PASS"
+  },
+  {
+    "test": "seller 2 distinct attribution same shift",
+    "result": "PASS"
+  },
+  {
+    "test": "blind close hides expected amount",
+    "result": "PASS"
+  },
+  {
+    "test": "M01 immediately CLOSED REVIEW_PENDING by seller 2",
+    "result": "PASS"
+  },
+  {
+    "test": "seller cannot see owner review button",
+    "result": "PASS"
+  },
+  {
+    "test": "owner flag preserves original close snapshot",
+    "result": "PASS"
+  },
+  {
+    "test": "sales and owner review persist reload",
+    "result": "PASS"
+  },
+  {
+    "test": "seller 1 also closes directly",
+    "result": "PASS"
+  },
+  {
+    "test": "manager scoped M02",
+    "result": "PASS"
+  },
+  {
+    "test": "M02 manager phone intake succeeds",
+    "result": "PASS"
+  },
+  {
+    "test": "manager named sale opens invoice specimen",
+    "result": "PASS"
+  },
+  {
+    "test": "invoice warranty printing does not mutate ledger",
+    "result": "PASS"
+  },
+  {
+    "test": "M02 manager directly closes without mandatory review",
+    "result": "PASS"
+  },
+  {
+    "test": "ERP context no runtime errors",
+    "result": "PASS"
+  }
+]

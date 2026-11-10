@@ -1,0 +1,47 @@
+export const en = {
+  "prov.supplier": "Supplier",
+  "prov.search": "Search supplier",
+  "prov.new": "New supplier name (optional)",
+  "prov.missing": "Not recorded",
+  "prov.history": "Supplier receipt history",
+  "prov.reference": "Delivery / invoice reference (optional)",
+  "prov.reason": "Correction reason",
+  "prov.save": "Record correction",
+  "prov.duplicate": "Select the existing supplier.",
+  "prov.unknown": "Unknown supplier.",
+  "prov.owner": "Owner access required.",
+  "prov.receipt": "Receiving operator",
+  "prov.allocation": "Receipt sources only — sold-unit lot allocation not approved.",
+} as const;
+type K = keyof typeof en;
+export const fr: Record<K, string> = {
+  "prov.supplier": "Fournisseur",
+  "prov.search": "Rechercher un fournisseur",
+  "prov.new": "Nom du nouveau fournisseur (facultatif)",
+  "prov.missing": "Non renseigné",
+  "prov.history": "Origine par réception",
+  "prov.reference": "Référence livraison / facture (facultative)",
+  "prov.reason": "Motif de correction",
+  "prov.save": "Enregistrer la correction",
+  "prov.duplicate": "Sélectionnez le fournisseur existant.",
+  "prov.unknown": "Fournisseur inconnu.",
+  "prov.owner": "Accès propriétaire requis.",
+  "prov.receipt": "Opérateur de réception",
+  "prov.allocation":
+    "Origine des réceptions uniquement — attribution des lots vendus non approuvée.",
+};
+export const ar: Record<K, string> = {
+  "prov.supplier": "المورد",
+  "prov.search": "البحث عن مورد",
+  "prov.new": "اسم مورد جديد (اختياري)",
+  "prov.missing": "غير مسجل",
+  "prov.history": "المصدر حسب الاستلام",
+  "prov.reference": "مرجع التسليم / الفاتورة (اختياري)",
+  "prov.reason": "سبب التصحيح",
+  "prov.save": "تسجيل التصحيح",
+  "prov.duplicate": "اختر المورد الموجود.",
+  "prov.unknown": "مورد غير معروف.",
+  "prov.owner": "يلزم وصول المالك.",
+  "prov.receipt": "موظف الاستلام",
+  "prov.allocation": "مصادر الاستلام فقط — توزيع الوحدات المباعة على الدفعات غير معتمد.",
+};

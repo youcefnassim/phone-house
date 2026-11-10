@@ -1,0 +1,55 @@
+{
+  "fr-DZ/": [
+    "2 postes de test ouverts",
+    "Client test 001 · Banque",
+    "Stock d’accessoires",
+    "Stock d’accessoires faible",
+    "Test uniquement"
+  ],
+  "fr-DZ/pos": [
+    "Client de passage de test",
+    "Client test 001",
+    "Client test 002",
+    "Vendeur test 001"
+  ],
+  "fr-DZ/cash": ["Aucune session ouverte", "Ouvrir une session de test", "Session de test"],
+  "fr-DZ/stock/phones": ["Enregistrement du stock", "Exporter (test)"],
+  "fr-DZ/stock/accessories": [
+    "Enregistrement du stock",
+    "Exporter (test)",
+    "SKU de test · Les brouillons de session ne changent jamais les soldes"
+  ],
+  "fr-DZ/customers": [
+    "Client test 001",
+    "Client test 002",
+    "Client test 003",
+    "DEMO-C001",
+    "DEMO-C002",
+    "DEMO-C003",
+    "Test actif"
+  ],
+  "fr-DZ/debts": ["Client test 002", "Test actif"],
+  "fr-DZ/suppliers": [
+    "DEMO-SUP-001",
+    "DEMO-SUP-002",
+    "Fournisseur test 001",
+    "Fournisseur test 002",
+    "Test actif"
+  ],
+  "fr-DZ/purchases": ["DEMO-PO-001", "DEMO-PO-002", "Test actif"],
+  "fr-DZ/expenses": ["Charges de test", "DEMO-EX-001", "Test actif"],
+  "fr-DZ/transfers": ["Test actif"],
+  "fr-DZ/facility": ["Client test 001", "DEMO-FA-001", "Employeur test", "Test actif"],
+  "fr-DZ/sav": ["Client test 001", "Client test 002", "Client test 003", "Test actif"],
+  "fr-DZ/catalog": ["TPL-RECEIPT", "TPL-TRANSFER"],
+  "fr-DZ/reports": ["Client test 001 · Banque", "Exporter (test)"],
+  "fr-DZ/users": ["Utilisateurs de test", "Vendeur test 001"],
+  "fr-DZ/audit": ["Exporter (test)", "Vendeur test 001 · Terminal M01 · 09:40"],
+  "fr-DZ/settings": ["ENVIRONNEMENT DE TEST", "Espace de test", "Ventes de test locales"],
+  "ar-DZ/customers": ["DEMO-C001", "DEMO-C002", "DEMO-C003"],
+  "ar-DZ/suppliers": ["DEMO-SUP-001", "DEMO-SUP-002"],
+  "ar-DZ/purchases": ["DEMO-PO-001", "DEMO-PO-002"],
+  "ar-DZ/expenses": ["DEMO-EX-001"],
+  "ar-DZ/facility": ["DEMO-FA-001"],
+  "ar-DZ/catalog": ["TPL-RECEIPT", "TPL-TRANSFER"]
+}

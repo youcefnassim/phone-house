@@ -1,0 +1,122 @@
+[
+  {
+    "language": "fr-DZ",
+    "path": "/pos",
+    "status": "PASS"
+  },
+  {
+    "language": "fr-DZ",
+    "path": "/cash",
+    "status": "PASS"
+  },
+  {
+    "language": "fr-DZ",
+    "path": "/sales",
+    "status": "PASS"
+  },
+  {
+    "language": "fr-DZ",
+    "path": "/stock/phones",
+    "status": "PASS"
+  },
+  {
+    "language": "fr-DZ",
+    "path": "/stock/accessories",
+    "status": "PASS"
+  },
+  {
+    "language": "fr-DZ",
+    "path": "/customers",
+    "status": "PASS"
+  },
+  {
+    "language": "fr-DZ",
+    "path": "/suppliers",
+    "status": "PASS"
+  },
+  {
+    "language": "fr-DZ",
+    "path": "/",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/pos",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/cash",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/sales",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/stock/phones",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/stock/accessories",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/customers",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/suppliers",
+    "status": "PASS"
+  },
+  {
+    "language": "ar-DZ",
+    "path": "/",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/pos",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/cash",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/sales",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/stock/phones",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/stock/accessories",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/customers",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/suppliers",
+    "status": "PASS"
+  },
+  {
+    "language": "en",
+    "path": "/",
+    "status": "PASS"
+  }
+]

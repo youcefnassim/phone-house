@@ -1,0 +1,400 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/dev-server[39m
+
+(node:10053) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10050) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10049) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10094) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10122) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10058) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m src/test/staff-closeout.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m src/test/test-workflows.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 99[2mms[22m[39m
+ [32m✓[39m src/test/sqlite-native.test.ts [2m([22m[2m23 tests[22m[2m)[22m[33m 528[2mms[22m[39m
+ [32m✓[39m src/test/native-history.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 402[2mms[22m[39m
+ [32m✓[39m src/test/native-operations.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 557[2mms[22m[39m
+ [32m✓[39m src/test/pos-cash-security.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 173[2mms[22m[39m
+ [32m✓[39m src/test/native-wave.test.ts [2m([22m[2m21 tests[22m[2m)[22m[33m 1182[2mms[22m[39m
+ [32m✓[39m src/test/native-api.test.ts [2m([22m[2m15 tests[22m[2m)[22m[33m 957[2mms[22m[39m
+ [32m✓[39m src/test/native-parity.test.ts [2m([22m[2m18 tests[22m[2m)[22m[33m 1111[2mms[22m[39m
+ [32m✓[39m src/test/phone-intake-option01.test.tsx [2m([22m[2m16 tests[22m[2m)[22m[33m 618[2mms[22m[39m
+     [33m[2m✓[22m[39m UX-02 ALL scope shows a required store choice with no M01 default [33m 572[2mms[22m[39m
+[90mstderr[2m | src/test/receiving-scanner.test.tsx[2m > [22m[2mreceiving scan rules[2m > [22m[2mcamera success stops tracks and presents encoded QR identifiers for human confirmation
+[22m[39mAn update to Scanner inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Scanner inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Scanner inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to Scanner inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/test/receiving-scanner.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[33m 4160[2mms[22m[39m
+     [33m[2m✓[22m[39m camera success stops tracks and presents encoded QR identifiers for human confirmation [33m 3402[2mms[22m[39m
+     [33m[2m✓[22m[39m label print/reprint projects CODE128 without mutation [33m 407[2mms[22m[39m
+ [32m✓[39m src/test/business-domain.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/test/test-documents.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m src/test/native-page.test.tsx [2m([22m[2m52 tests[22m[2m)[22m[33m 5701[2mms[22m[39m
+   [33m[2m✓[22m[39m confidential finance panel: owner sees unknown cost, manager gets server refusal [33m 3060[2mms[22m[39m
+ [32m✓[39m src/test/review11.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m src/test/test-workspace.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m src/test/production-outbox.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 216[2mms[22m[39m
+(node:10329) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m src/test/native-pos-search.test.ts [2m([22m[2m10 tests[22m[2m)[22m[33m 340[2mms[22m[39m
+ [32m✓[39m src/test/operations.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 380[2mms[22m[39m
+     [33m[2m✓[22m[39m validates receiving form before delivering an isolated draft [33m 351[2mms[22m[39m
+ [32m✓[39m src/test/review08.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/test/transactions.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m src/test/native-d1.test.ts [2m([22m[2m1 test[22m[2m)[22m[33m 6480[2mms[22m[39m
+   [33m[2m✓[22m[39m isolated Miniflare/workerd D1 executes aggregate, replay, CHECK rollback and immutable close review [33m 6474[2mms[22m[39m
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted signed HTTP/D1: owner catalog+price, seller receiving/Code128, second seller inline buyer+warranty Cash, immutable history/reprint, blind close and owner flag
+[22m[39mAn update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted signed HTTP/D1: owner catalog+price, seller receiving/Code128, second seller inline buyer+warranty Cash, immutable history/reprint, blind close and owner flag
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/test/review09.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m src/test/native-repository.test.ts [2m([22m[2m43 tests[22m[2m)[22m[32m 65[2mms[22m[39m
+ [32m✓[39m src/test/external-backend.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m src/test/supplier-provenance.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m src/test/native-worker.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 2715[2mms[22m[39m
+   [33m[2m✓[22m[39m worker serves a verified status over a real local D1 binding with a signed JWT [33m 2701[2mms[22m[39m
+ [32m✓[39m src/test/local-review.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 256[2mms[22m[39m
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted signed HTTP/D1: owner catalog+price, seller receiving/Code128, second seller inline buyer+warranty Cash, immutable history/reprint, blind close and owner flag
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/test/session-store.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m src/test/retail-usability.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 318[2mms[22m[39m
+ [32m✓[39m src/test/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted signed HTTP/D1: owner catalog+price, seller receiving/Code128, second seller inline buyer+warranty Cash, immutable history/reprint, blind close and owner flag
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted signed HTTP/D1: owner catalog+price, seller receiving/Code128, second seller inline buyer+warranty Cash, immutable history/reprint, blind close and owner flag
+[22m[39mAn update to BarcodeLabel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+(node:10668) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m src/test/native-receiving.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 109[2mms[22m[39m
+ [32m✓[39m src/test/backend-preflight.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m src/test/native-provenance-http.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 6504[2mms[22m[39m
+   [33m[2m✓[22m[39m owner provenance HTTP history has concrete pagination, immutable original and appended corrections; staff/revoked owner denied [33m 6501[2mms[22m[39m
+(node:10734) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m src/test/native-supplier-provenance.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 125[2mms[22m[39m
+ [32m✓[39m src/test/supplier-sav-commands.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+(node:10747) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m src/test/jwt-identity.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 243[2mms[22m[39m
+ [32m✓[39m src/test/business-forms.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 752[2mms[22m[39m
+ [32m✓[39m src/test/i18n.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 179[2mms[22m[39m
+ [32m✓[39m src/test/ledger-view.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 58[2mms[22m[39m
+ [32m✓[39m src/test/erp-domain.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/test/native-documents-ui.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 432[2mms[22m[39m
+   [33m[2m✓[22m[39m native invoice/warranty print uses immutable native DTO, isolated A4 portal and zero record changes [33m 353[2mms[22m[39m
+ [32m✓[39m src/test/native-adapter-readiness.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 27568[2mms[22m[39m
+   [33m[2m✓[22m[39m all registered page reads pass through the frontend HTTP adapter to signed Worker and isolated D1 [33m 10527[2mms[22m[39m
+   [33m[2m✓[22m[39m receiving → typed stock → atomic phone buyer/warranty → immutable specimen and cash readback with no reprint mutation [33m 6788[2mms[22m[39m
+   [33m[2m✓[22m[39m activation denies each missing prerequisite and revoked identity without any local fallback [33m 3302[2mms[22m[39m
+   [33m[2m✓[22m[39m M02 manager receives and sells anonymous accessories by bank without cash or customer writes [33m 3981[2mms[22m[39m
+   [33m[2m✓[22m[39m additive legacy supplier migration retains exact history checksum; logical export restores to a fresh local D1 only [33m 2965[2mms[22m[39m
+ [32m✓[39m src/test/erp-context.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 137[2mms[22m[39m
+ [32m✓[39m src/test/navigation-pending.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 348[2mms[22m[39m
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted signed HTTP/D1: owner catalog+price, seller receiving/Code128, second seller inline buyer+warranty Cash, immutable history/reprint, blind close and owner flag
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/test/app-routing.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/test/daily-native-controller.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 36127[2mms[22m[39m
+   [33m[2m✓[22m[39m daily controller over real loopback HTTP: M01 receiving, exact scanner, atomic buyer/warranty cash sale, reload history, pure specimens, blind close and retrospective review [33m 8957[2mms[22m[39m
+   [33m[2m✓[22m[39m M02 quantity receiving uses variant SKU and per-receipt supplier; anonymous Bank sale has no customer, warranty or cash movement [33m 6215[2mms[22m[39m
+   [33m[2m✓[22m[39m lost committed checkout response locks UI actions and reconciles same key without reposting [33m 5168[2mms[22m[39m
+   [33m[2m✓[22m[39m revoked actor is denied before receiving or selling; controller never yields fake success [33m 2886[2mms[22m[39m
+   [33m[2m✓[22m[39m closed shared drawer denies stale checkout atomically including new buyer; second open and owner review by seller denied [33m 5185[2mms[22m[39m
+   [33m[2m✓[22m[39m cash in/out evidence stays policy blocked and never becomes physical cash [33m 2718[2mms[22m[39m
+   [33m[2m✓[22m[39m real controller sale with explicit NO creates no warranty specimen; duplicate/oversell stays atomic [33m 4981[2mms[22m[39m
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close
+[22m[39mAn update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeReceiving inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close
+[22m[39mAn update to BarcodeLabel inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+[90mstderr[2m | src/test/native-mounted-daily.test.tsx[2m > [22m[2mmounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close
+[22m[39mAn update to NativeDailyPage inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32m✓[39m src/test/native-mounted-daily.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 48388[2mms[22m[39m
+   [33m[2m✓[22m[39m mounted signed HTTP/D1: owner catalog+price, seller receiving/Code128, second seller inline buyer+warranty Cash, immutable history/reprint, blind close and owner flag [33m 26016[2mms[22m[39m
+   [33m[2m✓[22m[39m mounted M02 AR signed flow: distinct supplier lots, anonymous accessory Bank, no buyer/warranty/cash posting, manager direct close [33m 13152[2mms[22m[39m
+   [33m[2m✓[22m[39m mounted lost committed checkout keeps original key locked, explicit status recovery reads receipt without second checkout [33m 7890[2mms[22m[39m
+   [33m[2m✓[22m[39m mounted source gate and verified shell never show local children; revoked and cross-store native reads deny [33m 1323[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m48 passed[39m[22m[90m (48)[39m
+[2m      Tests [22m [1m[32m554 passed[39m[22m[90m (554)[39m
+[2m   Start at [22m 12:55:43
+[2m   Duration [22m 65.05s[2m (transform 13.22s, setup 98.97s, import 59.88s, tests 147.79s, environment 190.27s)[22m
+

@@ -1,0 +1,211 @@
+{
+  "databaseExecution": "NOT RUN",
+  "files": [
+    {
+      "file": "db/proposed/0001_core_stores_users_roles.sql",
+      "outerGrammar": "PASS",
+      "bodies": []
+    },
+    {
+      "file": "db/proposed/0002_inventory.sql",
+      "outerGrammar": "PASS",
+      "bodies": [
+        {
+          "function": "CREATE FUNCTION private.phone_identity_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        }
+      ]
+    },
+    {
+      "file": "db/proposed/0003_sales_cash.sql",
+      "outerGrammar": "PASS",
+      "bodies": []
+    },
+    {
+      "file": "db/proposed/0004_purchasing.sql",
+      "outerGrammar": "PASS",
+      "bodies": [
+        {
+          "function": "CREATE FUNCTION public.owner_purchase_finance(_purchase_id uuid)",
+          "staticBody": "PARSED"
+        }
+      ]
+    },
+    {
+      "file": "db/proposed/0005_facility_transfers_sav.sql",
+      "outerGrammar": "PASS",
+      "bodies": []
+    },
+    {
+      "file": "db/proposed/0006_audit_offline.sql",
+      "outerGrammar": "PASS",
+      "bodies": [
+        {
+          "function": "CREATE FUNCTION private.deny_change() RETURNS trigger LANGUAGE plpgsql SET search_path=pg_catalog AS $$ BEGIN RAISE EXCEPTION 'Append-only history' USING ERRCODE='42501'; END $$;",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.journal_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        }
+      ]
+    },
+    {
+      "file": "db/proposed/0007_transaction_commands.sql",
+      "outerGrammar": "PASS",
+      "bodies": [
+        {
+          "function": "CREATE FUNCTION private.money(value text, allow_zero boolean DEFAULT false) RETURNS numeric",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.require_access(s text, manager boolean DEFAULT false) RETURNS uuid",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.reject_extra(p jsonb, allowed text[]) RETURNS void LANGUAGE plpgsql SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.command_begin(request jsonb, op text, manager boolean DEFAULT false) RETURNS jsonb",
+          "staticBody": "NOT RESOLVED",
+          "reason": "Not implemented (LookupExplicitNamespace only supports pg_catalog and public)"
+        },
+        {
+          "function": "CREATE FUNCTION private.finish(request jsonb,op text,subject uuid,result jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.journal(s text,op text,subject uuid,amount numeric,debit_account text,credit_account text) RETURNS void",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.lock_shift(id uuid,s text) RETURNS public.cash_shifts",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_phone_intake(request jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_accessory_receiving(request jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_cash_shift_open(request jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_cash_movement(request jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_cash_shift_close(request jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_pos_checkout(request jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_debt_repayment(request jsonb) RETURNS jsonb",
+          "staticBody": "PARSED"
+        }
+      ]
+    },
+    {
+      "file": "db/proposed/0008_relational_guards.sql",
+      "outerGrammar": "PASS",
+      "bodies": [
+        {
+          "function": "CREATE FUNCTION private.catalog_immutable() RETURNS trigger LANGUAGE plpgsql SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.repayment_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.refund_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.warranty_identity() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.facility_total() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.installment_parent_immutable() RETURNS trigger LANGUAGE plpgsql SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.transfer_approval() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.transfer_line_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.transfer_scan_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.transfer_stage_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.transfer_initial_stage() RETURNS trigger LANGUAGE plpgsql SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        }
+      ]
+    },
+    {
+      "file": "db/proposed/0009_reads_provisioning.sql",
+      "outerGrammar": "PASS",
+      "bodies": [
+        {
+          "function": "CREATE FUNCTION public.read_operational_snapshot(requested_scope text) RETURNS jsonb",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_assign_store_role(target_user uuid,requested_store text,requested_role public.app_role,reason text) RETURNS void",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION public.command_revoke_store_role(assignment uuid,reason text) RETURNS void",
+          "staticBody": "PARSED"
+        }
+      ]
+    },
+    {
+      "file": "db/proposed/0010_posting_integrity.sql",
+      "outerGrammar": "PASS",
+      "bodies": [
+        {
+          "function": "CREATE FUNCTION private.sale_line_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.receipt_cap() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.financial_source_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.reversal_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        },
+        {
+          "function": "CREATE FUNCTION private.sale_totals() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=pg_catalog AS $$",
+          "staticBody": "PARSED"
+        }
+      ]
+    }
+  ]
+}

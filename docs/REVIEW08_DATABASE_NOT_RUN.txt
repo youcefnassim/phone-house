@@ -1,0 +1,21 @@
+test_AA_same_phone_checkout_race (__main__.Review08Acceptance.test_AA_same_phone_checkout_race) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AB_structural_conflict (__main__.Review08Acceptance.test_AB_structural_conflict) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AC_owner_cost_denial (__main__.Review08Acceptance.test_AC_owner_cost_denial) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AD_blind_close_response (__main__.Review08Acceptance.test_AD_blind_close_response) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AE_bound_receipt_replay (__main__.Review08Acceptance.test_AE_bound_receipt_replay) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AF_cash_policy_blocked (__main__.Review08Acceptance.test_AF_cash_policy_blocked) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AG_close_checkout_race (__main__.Review08Acceptance.test_AG_close_checkout_race) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AH_receipt_revocation (__main__.Review08Acceptance.test_AH_receipt_revocation) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AI_blind_alternate_acl (__main__.Review08Acceptance.test_AI_blind_alternate_acl) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_AJ_no_unapproved_ownership_release (__main__.Review08Acceptance.test_AJ_no_unapproved_ownership_release) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_U_complete_physical_roundtrip (__main__.Review08Acceptance.test_U_complete_physical_roundtrip) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_V_variant_integrity (__main__.Review08Acceptance.test_V_variant_integrity) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_W_purchase_supplier_provenance (__main__.Review08Acceptance.test_W_purchase_supplier_provenance) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_X_receipt_cap_atomicity (__main__.Review08Acceptance.test_X_receipt_cap_atomicity) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_Y_unknown_cost_preserved (__main__.Review08Acceptance.test_Y_unknown_cost_preserved) ... skipped 'NOT RUN: separate owner approval artifact absent'
+test_Z_duplicate_identity_rolls_back_receipt (__main__.Review08Acceptance.test_Z_duplicate_identity_rolls_back_receipt) ... skipped 'NOT RUN: separate owner approval artifact absent'
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+OK (skipped=16)

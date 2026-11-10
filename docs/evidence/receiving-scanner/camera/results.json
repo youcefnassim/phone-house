@@ -1,0 +1,38 @@
+[
+  {
+    "name": "rear preference no audio",
+    "status": "PASS"
+  },
+  {
+    "name": "stop camera stops tracks",
+    "status": "PASS"
+  },
+  {
+    "name": "Escape stops tracks",
+    "status": "PASS"
+  },
+  {
+    "name": "actual 1D frame decoded stops stream",
+    "status": "PASS"
+  },
+  {
+    "name": "1D assigned to IMEI1 only",
+    "status": "PASS"
+  },
+  {
+    "name": "actual QR encoded identifiers decoded",
+    "status": "PASS"
+  },
+  {
+    "name": "verified QR assignment IMEI2",
+    "status": "PASS"
+  },
+  {
+    "name": "final close stops stream",
+    "status": "PASS"
+  },
+  {
+    "name": "no camera runtime errors",
+    "status": "PASS"
+  }
+]

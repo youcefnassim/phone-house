@@ -1,0 +1,14 @@
+{
+  "unit_pass": 497,
+  "browser_pass": 189,
+  "browser_groups": {
+    "flow/results.json": 51,
+    "flow/scenarios-results.json": 74,
+    "suppliers/results.json": 24,
+    "closeout/results.json": 16,
+    "routes/results.json": 24
+  },
+  "hosted": "NOT RUN",
+  "build": "harness build OK",
+  "lint": "FAIL"
+}

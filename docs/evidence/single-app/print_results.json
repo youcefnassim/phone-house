@@ -1,0 +1,82 @@
+[
+  {
+    "test": "automatic invoice preview opens after named test sale",
+    "result": "PASS",
+    "evidence": "sheets=1"
+  },
+  {
+    "test": "SPECIMEN banner on invoice",
+    "result": "PASS",
+    "evidence": "SPÉCIMEN / TEST — PAS UNE FACTURE FISCALE"
+  },
+  {
+    "test": "buyer surname+given on invoice",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "print button invokes window.print exactly once",
+    "result": "PASS",
+    "evidence": "count=1"
+  },
+  {
+    "test": "dedicated print root renders the sheet",
+    "result": "PASS",
+    "evidence": "print-root sheets=1"
+  },
+  {
+    "test": "@media print hides app chrome",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "printing class removed after print",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "4 prints total, zero ledger mutation (stock/cash/sales/debts/audit)",
+    "result": "PASS",
+    "evidence": "count=4 mutated=False"
+  },
+  {
+    "test": "warranty sheet shows item + IMEI",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "warranty print invokes print, still no mutation",
+    "result": "PASS",
+    "evidence": "count=5"
+  },
+  {
+    "test": "sale document history lists the sale in SAV",
+    "result": "PASS",
+    "evidence": "rows=1"
+  },
+  {
+    "test": "reopen from history + reprint: print invoked, no mutation",
+    "result": "PASS",
+    "evidence": "count=1"
+  },
+  {
+    "test": "dashboard reads named phone sale total and cash balance after reload",
+    "result": "PASS",
+    "evidence": "Ventes du jour\n45 000 DZD\n1 transactions\nTéléphones disponibles\n07\nUnités sérialisées individuelles\nStock d’accessoires\n95\n6 SKU distincts\nEspèces en caisse\n50 000 DZD\n1 sessions ouvertes"
+  },
+  {
+    "test": "accessory sale persists quantity decrement and separate cash movement",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "Arabic document renders dir=rtl",
+    "result": "PASS",
+    "evidence": "dir=rtl"
+  },
+  {
+    "test": "no page errors during print flows",
+    "result": "PASS",
+    "evidence": ""
+  }
+]

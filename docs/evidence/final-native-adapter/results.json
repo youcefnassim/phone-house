@@ -1,0 +1,250 @@
+{
+  "assertions": 122,
+  "checks": [
+    {
+      "language": "fr-DZ",
+      "theme": "light",
+      "width": 1440,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "light",
+      "width": 1440,
+      "route": "/pos",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "light",
+      "width": 1440,
+      "route": "/sales",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "light",
+      "width": 1440,
+      "route": "/settings",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "light",
+      "width": 1440,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/pos",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/sales",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/settings",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "fr-DZ",
+      "theme": "dark",
+      "width": 1440,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "light",
+      "width": 768,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "light",
+      "width": 768,
+      "route": "/pos",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "light",
+      "width": 768,
+      "route": "/sales",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "light",
+      "width": 768,
+      "route": "/settings",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "light",
+      "width": 768,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "dark",
+      "width": 768,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "dark",
+      "width": 768,
+      "route": "/pos",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "dark",
+      "width": 768,
+      "route": "/sales",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "dark",
+      "width": 768,
+      "route": "/settings",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "en",
+      "theme": "dark",
+      "width": 768,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "light",
+      "width": 390,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "light",
+      "width": 390,
+      "route": "/pos",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "light",
+      "width": 390,
+      "route": "/sales",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "light",
+      "width": 390,
+      "route": "/settings",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "light",
+      "width": 390,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "dark",
+      "width": 390,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "dark",
+      "width": 390,
+      "route": "/pos",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "dark",
+      "width": 390,
+      "route": "/sales",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "dark",
+      "width": 390,
+      "route": "/settings",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "language": "ar-DZ",
+      "theme": "dark",
+      "width": 390,
+      "route": "/",
+      "checks": 4,
+      "pass": true
+    },
+    {
+      "asset_slot": "synthetic non-logo intercepted only",
+      "checks": 2,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "test": "French is default when language unset",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "POS without open shift shows cash-blocked notice",
+    "result": "PASS",
+    "evidence": ""
+  },
+  {
+    "test": "cash sale without open shift records nothing",
+    "result": "PASS",
+    "evidence": "sales=0"
+  },
+  {
+    "test": "M01 phone cannot be added to M02 basket",
+    "result": "PASS",
+    "evidence": " items selected\n\nNo available test product in this store matches that barcode or IMEI.\n\nSubtotal\n0 DZD\nDiscount\nUnconfigured\nTotal\n0 DZD\nCash\nBank\nReview test basket\nOperational checkout not connected"
+  },
+  {
+    "test": "no page errors (negative flows)",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 390px fr-DZ light: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 390px ar-DZ dark: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 390px en dark: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 768px fr-DZ light: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 768px ar-DZ dark: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 768px en dark: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 1440px fr-DZ light: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 1440px ar-DZ dark: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  },
+  {
+    "test": "18 routes 1440px en dark: content, no overflow, no errors",
+    "result": "PASS",
+    "evidence": "[]"
+  }
+]

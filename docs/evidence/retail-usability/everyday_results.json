@@ -1,0 +1,62 @@
+[
+  {
+    "test": "fresh ledger shows zero sales",
+    "result": "PASS"
+  },
+  {
+    "test": "invalid optional IMEI2 blocks intake and focuses field",
+    "result": "PASS"
+  },
+  {
+    "test": "used Google phone survives reload with both identities and exact price",
+    "result": "PASS"
+  },
+  {
+    "test": "used filter includes added phone",
+    "result": "PASS"
+  },
+  {
+    "test": "global cross-slot identity duplicate rejected",
+    "result": "PASS"
+  },
+  {
+    "test": "receiving zero quantity rejected",
+    "result": "PASS"
+  },
+  {
+    "test": "existing accessory receiving persists +5 in M01 only",
+    "result": "PASS"
+  },
+  {
+    "test": "underpayment rejected before sale",
+    "result": "PASS"
+  },
+  {
+    "test": "cash sale without open drawer rejected",
+    "result": "PASS"
+  },
+  {
+    "test": "owner finance presentation SELLER",
+    "result": "PASS"
+  },
+  {
+    "test": "owner finance presentation MANAGER",
+    "result": "PASS"
+  },
+  {
+    "test": "owner finance presentation SUPER_ADMIN",
+    "result": "PASS"
+  },
+  {
+    "test": "mobile advanced navigation reaches SAV and closes drawer",
+    "result": "PASS"
+  },
+  {
+    "test": "navigation and disclosures never change persisted workspace",
+    "result": "PASS"
+  },
+  {
+    "test": "no runtime errors",
+    "result": "PASS"
+  }
+]

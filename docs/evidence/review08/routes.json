@@ -1,0 +1,119 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "title": "Executive Overview | Phone House Maghnia",
+      "heading": "Executive overview.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/stock/phones",
+      "title": "Phones Inventory | Phone House Maghnia",
+      "heading": "Phones inventory.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/stock/accessories",
+      "title": "Accessories Inventory | Phone House Maghnia",
+      "heading": "Accessories inventory.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/pos",
+      "title": "Point of Sale | Phone House Maghnia",
+      "heading": "Point of sale.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/cash",
+      "title": "Cash Registers | Phone House Maghnia",
+      "heading": "Cash registers.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/customers",
+      "title": "Customers | Phone House Maghnia",
+      "heading": "Customers.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/debts",
+      "title": "Customer Debts | Phone House Maghnia",
+      "heading": "Customer debts.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/suppliers",
+      "title": "Suppliers | Phone House Maghnia",
+      "heading": "Suppliers.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/purchases",
+      "title": "Purchases | Phone House Maghnia",
+      "heading": "Purchases & receipts.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/expenses",
+      "title": "Expenses | Phone House Maghnia",
+      "heading": "Expenses.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/transfers",
+      "title": "Transfers | Phone House Maghnia",
+      "heading": "Inter-store transfers.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/facility",
+      "title": "Facility Agreements | Phone House Maghnia",
+      "heading": "Facility agreements.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/sav",
+      "title": "Warranty & SAV | Phone House Maghnia",
+      "heading": "Warranty & SAV.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/catalog",
+      "title": "Catalog & Barcodes | Phone House Maghnia",
+      "heading": "Catalog & barcodes.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/users",
+      "title": "Users & Roles | Phone House Maghnia",
+      "heading": "Users & roles.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/audit",
+      "title": "Audit History | Phone House Maghnia",
+      "heading": "Audit history.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/reports",
+      "title": "Financial Reports | Phone House Maghnia",
+      "heading": "Financial reports.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/settings",
+      "title": "Workspace Settings | Phone House Maghnia",
+      "heading": "Workspace settings.",
+      "bodyVisible": true
+    },
+    {
+      "route": "/auth",
+      "title": "Sign In | Phone House Maghnia",
+      "heading": "Welcome back.",
+      "bodyVisible": true
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "language": "fr-DZ",
+    "width": 1440,
+    "theme": "light",
+    "routes": 6,
+    "headings_direction_overflow": "PASS",
+    "errors": []
+  },
+  {
+    "language": "en",
+    "width": 768,
+    "theme": "light",
+    "routes": 6,
+    "headings_direction_overflow": "PASS",
+    "errors": []
+  },
+  {
+    "language": "ar-DZ",
+    "width": 390,
+    "theme": "dark",
+    "routes": 6,
+    "headings_direction_overflow": "PASS",
+    "errors": []
+  }
+]

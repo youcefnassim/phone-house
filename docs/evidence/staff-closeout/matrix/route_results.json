@@ -1,0 +1,1712 @@
+[
+  {
+    "test": "route / fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /users fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth fr-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route / fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /users fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth fr-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route / fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /users fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth fr-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route / fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /users fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth fr-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route / fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /users fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth fr-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route / fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /users fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth fr-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route / ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /users ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth ar-DZ light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route / ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /users ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth ar-DZ light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route / ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /users ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth ar-DZ light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": false}"
+  },
+  {
+    "test": "route / ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /users ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth ar-DZ dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route / ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /users ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth ar-DZ dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route / ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /users ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth ar-DZ dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"rtl\", \"dark\": true}"
+  },
+  {
+    "test": "route / en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /users en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth en light 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route / en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /users en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth en light 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route / en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /pos en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /cash en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/phones en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /stock/accessories en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /catalog en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /transfers en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /customers en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /debts en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /suppliers en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /purchases en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /expenses en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /facility en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /sav en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /reports en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /users en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /audit en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /settings en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route /auth en light 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": false}"
+  },
+  {
+    "test": "route / en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /users en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth en dark 390x844",
+    "result": "PASS",
+    "evidence": "{\"width\": 390, \"scroll\": 390, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route / en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /users en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth en dark 768x1024",
+    "result": "PASS",
+    "evidence": "{\"width\": 768, \"scroll\": 768, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route / en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /pos en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /cash en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/phones en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /stock/accessories en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /catalog en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /transfers en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /customers en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /debts en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /suppliers en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /purchases en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /expenses en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /facility en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /sav en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /reports en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /users en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /audit en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /settings en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  },
+  {
+    "test": "route /auth en dark 1440x1800",
+    "result": "PASS",
+    "evidence": "{\"width\": 1440, \"scroll\": 1440, \"dir\": \"ltr\", \"dark\": true}"
+  }
+]

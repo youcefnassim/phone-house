@@ -1,0 +1,18 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS customer created and persisted after reload DRAFT-C-1
+PASS cash shift open M01 
+PASS customer→POS credit request draft (100000.00 outstanding, stock+cash unchanged, after reload) {"id": "DRAFT-TCR-0002", "customerId": "DRAFT-C-1", "store": "M01", "saleReference": "TCR-0002", "amount": "100000.00", "dueDate": "2026-12-31", "authorizationReference": "AUTH-E2E", "notes": "1\u00d7 Samsung Galaxy S24", "source": "Session draft"}
+PASS POS cash sale linked to customer + cash movement (after reload) TS-0003
+PASS partial repayment 40000.25 stored; outstanding preview 59999.75 
+PASS overpayment 59999.76 rejected with visible error Amount exceeds outstanding balance.
+PASS dispatch blocked without approvals Both Super Admin and M02 Manager approvals are required.
+PASS in transit: phone not available at destination 
+PASS incomplete scan blocks completion; foreign IMEI rejected Every item must be scanned before completion. Partial receipt is blocked (OD unresolved). | Scanned code is not on this transfer manifest.
+PASS transfer completed after full scan; phone available at M02 (after reload) 
+PASS M01 facility contract linked to test customer 
+PASS bank remittance without evidence document rejected Bank remittance requires an attached bank evidence document.
+PASS bank evidence draft stored unverified, separate from cash (after reload) 
+PASS SAV case linked to sold unit; duplicate open case rejected; unit not restocked An open service case already exists for this sold unit.
+PASS facility unavailable in M02 scope 
+PASS reset clears local test records 
+PASS no page errors 

@@ -1,0 +1,46 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS fr-DZ_1440_light ALL scope store empty
+PASS fr-DZ_1440_light store labels
+PASS fr-DZ_1440_light no quantity input
+PASS fr-DZ_1440_light More details collapsed
+PASS fr-DZ_1440_light empty submit shows errors
+PASS fr-DZ_1440_light price 0 rejected
+PASS fr-DZ_1440_light bad checksum rejected
+PASS fr-DZ_1440_light packaging missing expands More details
+PASS fr-DZ_1440_light success notice with PHU code
+PASS fr-DZ_1440_light double-click created one unit
+PASS fr-DZ_1440_light persists after reload
+PASS fr-DZ_1440_light search by unit barcode
+PASS fr-DZ_1440_light POS finds phone in M01
+PASS fr-DZ_1440_light no page errors
+PASS ar-DZ_390_dark ALL scope store empty
+PASS ar-DZ_390_dark store labels
+PASS ar-DZ_390_dark no quantity input
+PASS ar-DZ_390_dark More details collapsed
+PASS ar-DZ_390_dark empty submit shows errors
+PASS ar-DZ_390_dark price 0 rejected
+PASS ar-DZ_390_dark bad checksum rejected
+PASS ar-DZ_390_dark packaging missing expands More details
+PASS ar-DZ_390_dark success notice with PHU code
+PASS ar-DZ_390_dark double-click created one unit
+PASS ar-DZ_390_dark persists after reload
+PASS ar-DZ_390_dark search by unit barcode
+PASS ar-DZ_390_dark POS finds phone in M01
+PASS ar-DZ_390_dark no page errors
+PASS en_768_dark ALL scope store empty
+PASS en_768_dark store labels
+PASS en_768_dark no quantity input
+PASS en_768_dark More details collapsed
+PASS en_768_dark empty submit shows errors
+PASS en_768_dark price 0 rejected
+PASS en_768_dark bad checksum rejected
+PASS en_768_dark packaging missing expands More details
+PASS en_768_dark success notice with PHU code
+PASS en_768_dark double-click created one unit
+PASS en_768_dark persists after reload
+PASS en_768_dark search by unit barcode
+PASS en_768_dark POS finds phone in M01
+PASS en_768_dark no page errors
+TOTAL 42 PASS 0 FAIL

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "serial visible when no IMEI",
+    "status": "PASS"
+  },
+  {
+    "name": "ambiguous QR no assignment offer",
+    "status": "PASS"
+  },
+  {
+    "name": "serial-only phone accepted",
+    "status": "PASS"
+  },
+  {
+    "name": "serial search Enter POS",
+    "status": "PASS"
+  },
+  {
+    "name": "keyboard manufacturer barcode maps existing SKU",
+    "status": "PASS"
+  },
+  {
+    "name": "mapped receiving success",
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "results": [
+    {
+      "step": "overview",
+      "url": "http://localhost:8080/",
+      "breadcrumb": "Overview",
+      "active": ["Overview"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "cash-pending",
+      "url": "http://localhost:8080/cash",
+      "breadcrumb": "Cash registers",
+      "active": ["Cash registers"],
+      "ariaBusy": "true",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "cash-loaded",
+      "url": "http://localhost:8080/cash",
+      "breadcrumb": "Cash registers",
+      "active": ["Cash registers"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "facility-pending",
+      "url": "http://localhost:8080/facility",
+      "breadcrumb": "Facility agreements",
+      "active": ["Facility agreements"],
+      "ariaBusy": "true",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "pos-after-rapid",
+      "url": "http://localhost:8080/pos",
+      "breadcrumb": "Point of sale",
+      "active": ["Point of sale\nPOS"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "pos-settled",
+      "url": "http://localhost:8080/pos",
+      "breadcrumb": "Point of sale",
+      "active": ["Point of sale\nPOS"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "back",
+      "url": "http://localhost:8080/facility",
+      "breadcrumb": "Facility agreements",
+      "active": ["Facility agreements"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "forward",
+      "url": "http://localhost:8080/pos",
+      "breadcrumb": "Point of sale",
+      "active": ["Point of sale\nPOS"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "direct-cash",
+      "url": "http://localhost:8080/cash",
+      "breadcrumb": "Cash registers",
+      "active": ["Cash registers"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "direct-facility",
+      "url": "http://localhost:8080/facility",
+      "breadcrumb": "Facility agreements",
+      "active": ["Facility agreements"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "direct-pos",
+      "url": "http://localhost:8080/pos",
+      "breadcrumb": "Point of sale",
+      "active": ["Point of sale\nPOS"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    },
+    {
+      "step": "refresh-pos",
+      "url": "http://localhost:8080/pos",
+      "breadcrumb": "Point of sale",
+      "active": ["Point of sale\nPOS"],
+      "ariaBusy": "false",
+      "staleOverviewCount": 0
+    }
+  ],
+  "delayedChunkURLs": [
+    "http://localhost:8080/@oj-start/cash-CX4Vz2xk.js",
+    "http://localhost:8080/@oj-start/facility-NGq7gbEB.js",
+    "http://localhost:8080/@oj-start/cash-CX4Vz2xk.js",
+    "http://localhost:8080/@oj-start/facility-NGq7gbEB.js"
+  ],
+  "pageErrors": []
+}

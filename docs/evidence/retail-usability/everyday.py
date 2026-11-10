@@ -1,0 +1,50 @@
+import asyncio,json
+from pathlib import Path
+from playwright.async_api import async_playwright
+R=[];ROOT=Path(__file__).parent
+IDB="""()=>new Promise((resolve,reject)=>{const r=indexedDB.open('ph-test-workspace',1);r.onsuccess=()=>{const t=r.result.transaction('kv');const a=t.objectStore('kv').get('workspace'),b=t.objectStore('kv').get('session');t.oncomplete=()=>resolve({ws:a.result,s:b.result})};r.onerror=()=>reject(r.error)})"""
+def rec(n,ok): R.append({'test':n,'result':'PASS' if ok else 'FAIL'});print(R[-1],flush=True)
+async def main():
+ async with async_playwright() as p:
+  b=await p.chromium.launch(headless=True);c=await b.new_context(viewport={'width':1440,'height':1800});page=await c.new_page();errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+  async def go(r):await page.goto('http://localhost:8080'+r);await page.wait_for_timeout(900)
+  async def db():return await page.evaluate(IDB)
+  D=lambda:page.get_by_role('dialog').last
+  await go('/');await page.evaluate("localStorage.setItem('ph-lang','en')");await go('/')
+  before=await db()
+  rec('fresh ledger shows zero sales',before['ws']['sales']==[] and '0 DZD' in await page.locator('.metrics-grid').inner_text())
+  await go('/stock/phones');await page.get_by_role('button',name='Add phone',exact=True).click()
+  for k,v in {'name':'Pixel Review','brand':'Google','imei1':'359876543210881','color':'Black','storage':'128 GB','salePrice':'100.01','barcode':'RETAIL881'}.items():await D().locator(f'[name={k}]').fill(v)
+  await D().locator('[name=condition]').select_option('USED');await D().locator('[name=packaging]').select_option('NO_BOX')
+  await D().get_by_text('Optional details',exact=True).click();await D().locator('[name=imei2]').fill('123');await D().locator('form button[type=submit]').click()
+  rec('invalid optional IMEI2 blocks intake and focuses field',len((await db())['ws']['phones'])==len(before['ws']['phones']) and await D().locator('[name=imei2]').get_attribute('aria-invalid')=='true')
+  await D().locator('[name=imei2]').fill('359876543210882');await D().locator('[name=battery]').fill('88');await D().locator('form button[type=submit]').click();await page.wait_for_timeout(300);await page.reload();await page.wait_for_timeout(900)
+  state=await db();phone=next(x for x in state['ws']['phones'] if x['name']=='Pixel Review')
+  rec('used Google phone survives reload with both identities and exact price',phone['draft']['battery']=='88' and phone['imei2']=='359876543210882' and phone['amount']=='100.01')
+  await page.get_by_role('button',name='Used',exact=True).click();rec('used filter includes added phone',await page.locator('tbody tr',has_text='Pixel Review').count()==1)
+  await page.get_by_role('button',name='All',exact=True).click();await page.get_by_role('button',name='Add phone',exact=True).click()
+  for k,v in {'name':'Duplicate Review','brand':'Google','imei1':'359876543210882','color':'Black','storage':'128 GB','salePrice':'1','barcode':'RETAIL883'}.items():await D().locator(f'[name={k}]').fill(v)
+  await D().locator('[name=packaging]').select_option('NO_BOX');await D().locator('form button[type=submit]').click()
+  rec('global cross-slot identity duplicate rejected',await D().get_by_role('alert').count()>0 and not any(x['name']=='Duplicate Review' for x in (await db())['ws']['phones']))
+  await page.keyboard.press('Escape');await go('/stock/accessories');await page.get_by_role('button',name='Receive accessories',exact=True).click();await D().get_by_label('Receiving product').select_option('AC-001')
+  await D().locator('[name=quantity]').fill('0');await D().locator('[name=reference]').fill('RET-RECV-1');await D().locator('form button[type=submit]').click()
+  rec('receiving zero quantity rejected',await D().get_by_role('alert').count()>0)
+  await D().locator('[name=quantity]').fill('5');await D().locator('form button[type=submit]').click();await page.wait_for_timeout(300);await page.reload();await page.wait_for_timeout(900)
+  rec('existing accessory receiving persists +5 in M01 only',next(x for x in (await db())['ws']['accessories'] if x['id']=='AC-001')['quantity']==25)
+  await go('/pos');await page.get_by_label('Scan barcode or search products').fill('RETAIL881');await page.keyboard.press('Enter');await page.get_by_role('button',name='Review basket',exact=True).click();await D().locator('[name=amount]').fill('100');await D().locator('form button[type=submit]').click()
+  rec('underpayment rejected before sale',await D().get_by_role('alert').count()>0 and (await db())['ws']['sales']==[])
+  await D().locator('[name=amount]').fill('101');await D().locator('form button[type=submit]').click();await D().get_by_role('button',name='Record sale',exact=True).click()
+  rec('cash sale without open drawer rejected',not (await db())['ws']['sales'] and 'Open a test cash shift' in await page.locator('main').inner_text())
+  await page.keyboard.press('Escape');await go('/purchases');await page.get_by_text('More options',exact=True).click()
+  for role in ['SELLER','MANAGER','SUPER_ADMIN']:
+   await page.get_by_label('Role preview').select_option(role);await page.wait_for_timeout(500)
+   await page.locator('tbody button').first.click();await page.wait_for_timeout(600)
+   rec('owner finance presentation '+role, await D().locator('.owner-finance').count()==(1 if role=='SUPER_ADMIN' else 0))
+   await page.keyboard.press('Escape')
+  snap=await db();await go('/');await page.set_viewport_size({'width':390,'height':844});await page.get_by_role('button',name='Open navigation').click();await page.locator('.nav-disclosure').filter(has_text='Management').locator('summary').click();await page.locator('.sidebar').get_by_role('link',name='Warranty & SAV').click();await page.wait_for_timeout(900)
+  rec('mobile advanced navigation reaches SAV and closes drawer',page.url.endswith('/sav') and not await page.locator('.sidebar').is_visible())
+  rec('navigation and disclosures never change persisted workspace',snap==await db())
+  await page.screenshot(path=str(ROOT/'everyday_mobile.png'));rec('no runtime errors',not errors)
+  await b.close()
+ (ROOT/'everyday_results.json').write_text(json.dumps(R,indent=2));print('TOTAL',len(R),'PASS',sum(x['result']=='PASS' for x in R))
+asyncio.run(main())

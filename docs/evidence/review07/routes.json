@@ -1,0 +1,100 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Executive Overview | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/pos",
+      "title": "Point of Sale | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/cash",
+      "title": "Cash Registers | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/stock/phones",
+      "title": "Phones Inventory | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/stock/accessories",
+      "title": "Accessories Inventory | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/customers",
+      "title": "Customers | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/debts",
+      "title": "Customer Debts | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/suppliers",
+      "title": "Suppliers | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/purchases",
+      "title": "Purchases | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/expenses",
+      "title": "Expenses | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/transfers",
+      "title": "Transfers | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/facility",
+      "title": "Facility Agreements | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/sav",
+      "title": "Warranty & SAV | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/catalog",
+      "title": "Catalog & Barcodes | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/users",
+      "title": "Users & Roles | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/audit",
+      "title": "Audit History | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/reports",
+      "title": "Financial Reports | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/settings",
+      "title": "Workspace Settings | Phone House Maghnia",
+      "bodyVisible": true
+    },
+    {
+      "path": "/auth",
+      "title": "Sign In | Phone House Maghnia",
+      "bodyVisible": true
+    }
+  ],
+  "pageErrors": []
+}

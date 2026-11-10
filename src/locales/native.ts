@@ -1,0 +1,36 @@
+export const en = {
+  "native.production": "Production",
+  "native.test": "Test workspace",
+  "native.notConnected": "Not connected",
+  "native.unauthorized": "Verified sign-in required",
+  "native.forbidden": "Access denied",
+  "native.error": "Backend unavailable",
+  "native.loading": "Loading server records…",
+  "native.empty": "No server records",
+  "native.store": "Select one store",
+  "native.title": "Phone House · Production",
+} as const;
+export const fr: Record<keyof typeof en, string> = {
+  "native.production": "Production",
+  "native.test": "Espace de test",
+  "native.notConnected": "Non connecté",
+  "native.unauthorized": "Connexion vérifiée requise",
+  "native.forbidden": "Accès refusé",
+  "native.error": "Backend indisponible",
+  "native.loading": "Chargement des enregistrements serveur…",
+  "native.empty": "Aucun enregistrement serveur",
+  "native.store": "Sélectionnez un magasin",
+  "native.title": "Phone House · Production",
+};
+export const ar: Record<keyof typeof en, string> = {
+  "native.production": "الإنتاج",
+  "native.test": "مساحة الاختبار",
+  "native.notConnected": "غير متصل",
+  "native.unauthorized": "يلزم تسجيل دخول موثّق",
+  "native.forbidden": "الوصول مرفوض",
+  "native.error": "الخادم غير متاح",
+  "native.loading": "جارٍ تحميل سجلات الخادم…",
+  "native.empty": "لا توجد سجلات خادم",
+  "native.store": "اختر متجرًا واحدًا",
+  "native.title": "Phone House · الإنتاج",
+};
