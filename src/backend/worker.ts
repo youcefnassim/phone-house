@@ -2,13 +2,16 @@ import { createD1Port, type D1Binding } from "./sqlite/d1-port";
 import { createJwtIdentityVerifier } from "./sqlite/jwt-identity";
 import { createNativeService } from "./sqlite/service";
 import { createNativeApiHandler } from "./native-api";
-/** Standalone service source only; never imported by the Lovable application.
- * No account, binding, origin, provider, credentials or deployment is configured.
+/** Native API handler, mounted at /api/native/* by src/server.ts (one Worker, same origin).
+ * Bindings come from wrangler.jsonc per environment; nothing works until ENABLE_NATIVE,
+ * DB, API_HOST, ALLOWED_ORIGIN, IDENTITY_CONFIG and RATE_LIMIT are all present.
  */
 export interface NativeWorkerEnv {
   DB?: D1Binding;
   ENABLE_NATIVE?: string;
   API_HOST?: string;
+  /** Dev only: allow plain http, and only when API_HOST is localhost/127.0.0.1. */
+  LOCAL_DEV_INSECURE?: string;
   ALLOWED_ORIGIN?: string;
   IDENTITY_CONFIG?: string;
   RATE_LIMIT?: { limit(input: { key: string }): Promise<{ success: boolean }> };
@@ -34,7 +37,11 @@ export default {
       !env.RATE_LIMIT
     )
       return unavailable("NOT_CONFIGURED");
-    if (url.protocol !== "https:" || url.host !== env.API_HOST)
+    const localHttp =
+      env.LOCAL_DEV_INSECURE === "1" &&
+      /^(localhost|127\.0\.0\.1)(:\d+)?$/.test(env.API_HOST) &&
+      url.protocol === "http:";
+    if ((url.protocol !== "https:" && !localHttp) || url.host !== env.API_HOST)
       return unavailable("HOST_REJECTED", 403);
     if (request.headers.get("Origin") !== env.ALLOWED_ORIGIN)
       return unavailable("ORIGIN_REJECTED", 403);

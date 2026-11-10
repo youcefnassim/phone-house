@@ -11,7 +11,11 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "cf:build": "VITE_APP_MODE=production vite build",
+    "cf:check": "wrangler deploy --dry-run --config wrangler.jsonc --env staging --outdir .wrangler/dry-run",
+    "cf:migrate:local": "wrangler d1 migrations apply DB --local --config wrangler.jsonc --env dev",
+    "cf:dev": "wrangler dev --config wrangler.jsonc --env dev --local"
   },
   "overrides": {
     "rolldown": "1.2.1"
@@ -104,6 +108,7 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
     "vite": "8.1.5",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "wrangler": "4.116.0"
   }
 }

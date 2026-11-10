@@ -2,6 +2,11 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import nativeWorker, { type NativeWorkerEnv } from "./backend/worker";
+
+/** One Worker, one origin: /api/native/* is the native ERP API; everything else is the app. */
+const isNativeApi = (pathname: string) =>
+  pathname === "/api/native" || pathname.startsWith("/api/native/");
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -46,6 +51,8 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    if (isNativeApi(new URL(request.url).pathname))
+      return nativeWorker.fetch(request, (env ?? {}) as NativeWorkerEnv);
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

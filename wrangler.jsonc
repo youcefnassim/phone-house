@@ -1,0 +1,97 @@
+// Phone House ERP — one Worker serves the app (SSR + static assets) and /api/native/* on the same origin.
+// LOCAL ONLY so far: no Cloudflare account exists. Every ID below is a PLACEHOLDER (all zeros) and must be
+// replaced with the real resource ID only after the owner's explicit "go" for that exact resource.
+// Secrets (IDENTITY_CONFIG, AUTH_SIGNING_JWK, BACKUP_KEY) are never written here: use `wrangler secret put`
+// per environment, or the git-ignored .dev.vars for local dev.
+// Always pass `--config wrangler.jsonc --env <dev|staging|production>`; the build also writes a Nitro
+// redirect file (.wrangler/deploy/config.json) that must not be used for deployment.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "phonehouse-erp",
+  "main": ".output/server/index.mjs",
+  "compatibility_date": "2026-07-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "no_bundle": true,
+  "rules": [{ "type": "ESModule", "globs": ["**/*.mjs", "**/*.js"] }],
+  "assets": { "binding": "ASSETS", "directory": ".output/public" },
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": { "enabled": true },
+  "env": {
+    "dev": {
+      "name": "phonehouse-erp-dev",
+      "vars": {
+        "ENABLE_NATIVE": "OWNER_APPROVED",
+        "API_HOST": "localhost:8787",
+        "ALLOWED_ORIGIN": "http://localhost:8787",
+        "LOCAL_DEV_INSECURE": "1",
+        "APP_ENV": "dev",
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "phonehouse-erp-dev",
+          "database_id": "00000000-0000-0000-0000-000000000001",
+          "migrations_dir": "db/sqlite",
+        },
+      ],
+      "r2_buckets": [
+        { "binding": "PRIVATE_FILES", "bucket_name": "phonehouse-erp-dev-private" },
+        { "binding": "BACKUPS", "bucket_name": "phonehouse-erp-dev-backups" },
+      ],
+      "ratelimits": [
+        { "name": "RATE_LIMIT", "namespace_id": "1001", "simple": { "limit": 300, "period": 60 } },
+      ],
+    },
+    "staging": {
+      "name": "phonehouse-erp-staging",
+      "routes": [{ "pattern": "staging.erp.phonehousemaghnia.com", "custom_domain": true }],
+      "vars": {
+        "ENABLE_NATIVE": "OWNER_APPROVED",
+        "API_HOST": "staging.erp.phonehousemaghnia.com",
+        "ALLOWED_ORIGIN": "https://staging.erp.phonehousemaghnia.com",
+        "APP_ENV": "staging",
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "phonehouse-erp-staging",
+          "database_id": "00000000-0000-0000-0000-000000000002",
+          "migrations_dir": "db/sqlite",
+        },
+      ],
+      "r2_buckets": [
+        { "binding": "PRIVATE_FILES", "bucket_name": "phonehouse-erp-staging-private" },
+        { "binding": "BACKUPS", "bucket_name": "phonehouse-erp-staging-backups" },
+      ],
+      "ratelimits": [
+        { "name": "RATE_LIMIT", "namespace_id": "1002", "simple": { "limit": 300, "period": 60 } },
+      ],
+    },
+    "production": {
+      "name": "phonehouse-erp-prod",
+      "routes": [{ "pattern": "erp.phonehousemaghnia.com", "custom_domain": true }],
+      "vars": {
+        "ENABLE_NATIVE": "OWNER_APPROVED",
+        "API_HOST": "erp.phonehousemaghnia.com",
+        "ALLOWED_ORIGIN": "https://erp.phonehousemaghnia.com",
+        "APP_ENV": "production",
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "phonehouse-erp-prod",
+          "database_id": "00000000-0000-0000-0000-000000000003",
+          "migrations_dir": "db/sqlite",
+        },
+      ],
+      "r2_buckets": [
+        { "binding": "PRIVATE_FILES", "bucket_name": "phonehouse-erp-prod-private" },
+        { "binding": "BACKUPS", "bucket_name": "phonehouse-erp-prod-backups" },
+      ],
+      "ratelimits": [
+        { "name": "RATE_LIMIT", "namespace_id": "1003", "simple": { "limit": 300, "period": 60 } },
+      ],
+    },
+  },
+}
