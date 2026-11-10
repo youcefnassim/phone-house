@@ -13,6 +13,7 @@ export async function localD1AdapterHarness() {
     script: 'export default {fetch(){return new Response("local only")}}',
     compatibilityDate: "2026-08-06",
     d1Databases: ["DB", "RESTORE"],
+    r2Buckets: ["BACKUPS"],
   });
   // A setup failure must not leak the workerd process into later tests.
   try {
@@ -26,6 +27,7 @@ export async function localD1AdapterHarness() {
 async function setup(mf: Miniflare) {
   const db = await mf.getD1Database("DB");
   const restore = await mf.getD1Database("RESTORE");
+  const backups = await mf.getR2Bucket("BACKUPS");
   const files = sqliteMigrations;
   async function migrate(binding: typeof db, names = files) {
     for (const name of names) {
@@ -117,6 +119,7 @@ async function setup(mf: Miniflare) {
   return {
     db,
     restore,
+    backups,
     migrate,
     files,
     repository,

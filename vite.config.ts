@@ -65,6 +65,9 @@ export default defineConfig({
         },
       ]
     : [],
+  // Worker cron triggers (wrangler.jsonc) -> daily D1 export to private R2.
+  // The wrapper spreads these into nitro() at runtime; its type omits `plugins`.
+  nitro: { plugins: ["./src/backend/nitro-scheduled.ts"] } as { preset?: string },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
