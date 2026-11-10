@@ -46,8 +46,10 @@ export function createJwtIdentityVerifier(
         )
           return null;
         const rows = await db.read({
-          sql: `SELECT l.user_id FROM identity_subjects l JOIN accounts a ON a.id=l.user_id JOIN sessions s ON s.user_id=a.id WHERE l.issuer=? AND l.subject=? AND a.active=1 AND s.id=? AND s.revoked=0 AND s.expires_at>?`,
-          params: [issuer, payload.sub, payload["sid"], clock()],
+          // Phase 2.2: an account that must change its password cannot use the ERP API, and a seller
+          // session opened by PIN dies with its device session (revoked or expired parent).
+          sql: `SELECT l.user_id FROM identity_subjects l JOIN accounts a ON a.id=l.user_id JOIN sessions s ON s.user_id=a.id WHERE l.issuer=? AND l.subject=? AND a.active=1 AND s.id=? AND s.revoked=0 AND s.expires_at>? AND NOT EXISTS(SELECT 1 FROM account_credentials c WHERE c.user_id=a.id AND c.must_change=1) AND NOT EXISTS(SELECT 1 FROM session_parents p JOIN sessions ps ON ps.id=p.parent_session_id WHERE p.session_id=s.id AND (ps.revoked=1 OR ps.expires_at<=?))`,
+          params: [issuer, payload.sub, payload["sid"], clock(), clock()],
         });
         const userId = rows[0]?.["user_id"];
         if (rows.length !== 1 || typeof userId !== "string") return null;

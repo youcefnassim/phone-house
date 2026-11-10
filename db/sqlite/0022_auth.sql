@@ -1,0 +1,26 @@
+-- Phase 2.2 (owner-approved 2026-11-10): own login in D1. Additive only.
+-- Credentials and PIN rows are mutable state (rehash, lockout); every security event is append-only.
+CREATE TABLE account_credentials(user_id TEXT PRIMARY KEY REFERENCES accounts(id),email TEXT NOT NULL UNIQUE COLLATE NOCASE CHECK(length(email) BETWEEN 3 AND 254 AND email=lower(trim(email))),display_name TEXT NOT NULL CHECK(length(trim(display_name)) BETWEEN 1 AND 120),algorithm TEXT NOT NULL CHECK(algorithm='PBKDF2-SHA256+HMAC-SHA256'),iterations INTEGER NOT NULL CHECK(iterations BETWEEN 100000 AND 10000000),salt TEXT NOT NULL,hash TEXT NOT NULL,pepper_id TEXT NOT NULL,must_change INTEGER NOT NULL CHECK(must_change IN(0,1)),failed_count INTEGER NOT NULL CHECK(failed_count BETWEEN 0 AND 5),locked_until INTEGER,updated_at INTEGER NOT NULL) STRICT;
+CREATE TABLE seller_pins(user_id TEXT PRIMARY KEY REFERENCES accounts(id),algorithm TEXT NOT NULL CHECK(algorithm='PBKDF2-SHA256+HMAC-SHA256'),iterations INTEGER NOT NULL CHECK(iterations BETWEEN 100000 AND 10000000),salt TEXT NOT NULL,hash TEXT NOT NULL,pepper_id TEXT NOT NULL,failed_count INTEGER NOT NULL CHECK(failed_count BETWEEN 0 AND 5),locked INTEGER NOT NULL CHECK(locked IN(0,1)),updated_at INTEGER NOT NULL) STRICT;
+-- Refresh secret (SHA-256 of the HttpOnly cookie value) for a device session.
+CREATE TABLE session_secrets(session_id TEXT PRIMARY KEY REFERENCES sessions(id),refresh_hash TEXT NOT NULL UNIQUE,device_id TEXT NOT NULL,created_at INTEGER NOT NULL) STRICT;
+-- A seller session opened by PIN inside a device session; it dies with its parent.
+CREATE TABLE session_parents(session_id TEXT PRIMARY KEY REFERENCES sessions(id),parent_session_id TEXT NOT NULL REFERENCES sessions(id),store_id TEXT NOT NULL CHECK(store_id IN('M01','M02')),CHECK(session_id<>parent_session_id)) STRICT;
+CREATE TABLE device_active_seller(device_session_id TEXT PRIMARY KEY REFERENCES sessions(id),seller_session_id TEXT NOT NULL REFERENCES session_parents(session_id),at INTEGER NOT NULL) STRICT;
+CREATE TABLE known_devices(user_id TEXT NOT NULL REFERENCES accounts(id),device_id TEXT NOT NULL CHECK(length(device_id) BETWEEN 8 AND 80),first_seen INTEGER NOT NULL,PRIMARY KEY(user_id,device_id)) STRICT;
+CREATE TABLE auth_events(id TEXT PRIMARY KEY,user_id TEXT REFERENCES accounts(id),kind TEXT NOT NULL CHECK(kind IN('LOGIN_OK','LOGIN_FAIL','LOGIN_LOCKED','LOCKOUT','LOGOUT','REFRESH_FAIL','PASSWORD_CHANGED','PASSWORD_RESET','ACCOUNT_CREATED','NEW_DEVICE','PIN_SET','PIN_OK','PIN_FAIL','PIN_LOCKED','SELLER_CLEARED','ALERT_ACK')),actor_id TEXT REFERENCES accounts(id),device_id TEXT,ip TEXT,at INTEGER NOT NULL) STRICT;
+CREATE INDEX auth_events_user_at ON auth_events(user_id,at);
+CREATE TABLE owner_alerts(id TEXT PRIMARY KEY,kind TEXT NOT NULL CHECK(kind IN('NEW_DEVICE')),user_id TEXT NOT NULL REFERENCES accounts(id),device_id TEXT NOT NULL,ip TEXT,at INTEGER NOT NULL) STRICT;
+CREATE TABLE owner_alert_acks(alert_id TEXT PRIMARY KEY REFERENCES owner_alerts(id),actor_id TEXT NOT NULL REFERENCES accounts(id),at INTEGER NOT NULL) STRICT;
+-- PIN child session: the device session's account belongs to that store (or is SUPER_ADMIN), the seller is
+-- an active SELLER/MANAGER of that store, the parent is a device session (has a refresh secret), not a child.
+CREATE TRIGGER session_parent_scope BEFORE INSERT ON session_parents WHEN NOT EXISTS(SELECT 1 FROM sessions p JOIN memberships m ON m.user_id=p.user_id WHERE p.id=NEW.parent_session_id AND p.revoked=0 AND ((m.role='SUPER_ADMIN' AND m.store_id='GLOBAL') OR m.store_id=NEW.store_id)) OR NOT EXISTS(SELECT 1 FROM sessions c JOIN accounts a ON a.id=c.user_id JOIN memberships m ON m.user_id=c.user_id WHERE c.id=NEW.session_id AND a.active=1 AND m.store_id=NEW.store_id AND m.role IN('SELLER','MANAGER')) OR NOT EXISTS(SELECT 1 FROM session_secrets WHERE session_id=NEW.parent_session_id) OR EXISTS(SELECT 1 FROM session_parents WHERE session_id=NEW.parent_session_id) BEGIN SELECT RAISE(ABORT,'FORBIDDEN'); END;
+CREATE TRIGGER owner_alert_ack_owner BEFORE INSERT ON owner_alert_acks WHEN NOT EXISTS(SELECT 1 FROM memberships WHERE user_id=NEW.actor_id AND role='SUPER_ADMIN' AND store_id='GLOBAL') BEGIN SELECT RAISE(ABORT,'FORBIDDEN'); END;
+CREATE TRIGGER immutable_auth_events_update BEFORE UPDATE ON auth_events BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_auth_events_delete BEFORE DELETE ON auth_events BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_owner_alerts_update BEFORE UPDATE ON owner_alerts BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_owner_alerts_delete BEFORE DELETE ON owner_alerts BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_owner_alert_acks_update BEFORE UPDATE ON owner_alert_acks BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_owner_alert_acks_delete BEFORE DELETE ON owner_alert_acks BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_known_devices_update BEFORE UPDATE ON known_devices BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;
+CREATE TRIGGER immutable_session_parents_update BEFORE UPDATE ON session_parents BEGIN SELECT RAISE(ABORT,'APPEND_ONLY'); END;

@@ -55,3 +55,17 @@ it("cross-origin calls are rejected", async () => {
   );
   expect(await code(r)).toBe("ORIGIN_REJECTED");
 });
+
+it("server entry finds the Worker env where Nitro puts it (request.runtime.cloudflare.env, then __env__)", async () => {
+  const { workerEnv } = await import("@/server");
+  const env = { API_HOST: "x" };
+  const req = Object.assign(new Request("https://x/api/native/status"), {
+    runtime: { cloudflare: { env } },
+  });
+  expect(workerEnv(req, undefined)).toBe(env);
+  expect(workerEnv(new Request("https://x/"), env)).toBe(env);
+  (globalThis as { __env__?: unknown }).__env__ = env;
+  expect(workerEnv(new Request("https://x/"), undefined)).toBe(env);
+  delete (globalThis as { __env__?: unknown }).__env__;
+  expect(workerEnv(new Request("https://x/"), undefined)).toEqual({});
+});

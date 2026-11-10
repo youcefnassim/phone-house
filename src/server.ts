@@ -4,9 +4,19 @@ import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 import nativeWorker, { type NativeWorkerEnv } from "./backend/worker";
 
-/** One Worker, one origin: /api/native/* is the native ERP API; everything else is the app. */
-const isNativeApi = (pathname: string) =>
-  pathname === "/api/native" || pathname.startsWith("/api/native/");
+/** One Worker, one origin: /api/auth/* and /api/native/* are the ERP API; everything else is the app. */
+const isNativeApi = (pathname: string) => /^\/api\/(native|auth)(\/|$)/.test(pathname);
+
+/** Nitro's cloudflare-module preset calls this entry with the request only; the Worker env is kept on
+ * request.runtime.cloudflare.env (and globalThis.__env__). Use an explicit env argument when given. */
+export function workerEnv(request: Request, env: unknown): NativeWorkerEnv {
+  if (env && typeof env === "object") return env as NativeWorkerEnv;
+  const runtime = (request as Request & { runtime?: { cloudflare?: { env?: unknown } } }).runtime;
+  const fromRequest = runtime?.cloudflare?.env;
+  if (fromRequest && typeof fromRequest === "object") return fromRequest as NativeWorkerEnv;
+  const global = (globalThis as { __env__?: unknown }).__env__;
+  return global && typeof global === "object" ? (global as NativeWorkerEnv) : {};
+}
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -52,7 +62,7 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     if (isNativeApi(new URL(request.url).pathname))
-      return nativeWorker.fetch(request, (env ?? {}) as NativeWorkerEnv);
+      return nativeWorker.fetch(request, workerEnv(request, env));
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
